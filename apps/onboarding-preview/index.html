@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>重塑人生 - Onboarding 引导流程预览</title>
+    <style>
+        /* 重置样式 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+        }
+        
+        :root {
+            /* 颜色方案 */
+            --primary-color: #6a5acd; /* 主色调 */
+            --primary-light: #9d91e3;
+            --primary-dark: #483d8b;
+            --secondary-color: #5fc9c2; /* 辅助色 */
+            --secondary-light: #8ee9e2;
+            --secondary-dark: #3a867f;
+            --text-dark: #333;
+            --text-medium: #666;
+            --text-light: #999;
+            --bg-light: #f5f7fa;
+            --white: #ffffff;
+            
+            /* 间距 */
+            --spacing-xs: 4px;
+            --spacing-sm: 8px;
+            --spacing-md: 16px;
+            --spacing-lg: 24px;
+            --spacing-xl: 32px;
+            
+            /* 过渡 */
+            --transition-fast: 0.2s ease;
+            --transition-normal: 0.3s ease;
+            --transition-slow: 0.5s ease;
+        }
+        
+        body {
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            font-size: 16px;
+            line-height: 1.6;
+        }
+        
+        /* 模拟iPhone 15 Pro设备尺寸 */
+        .device-frame {
+            width: 100%;
+            height: 812px;
+            overflow: hidden;
+            position: relative;
+            background-color: var(--white);
+        }
+        
+        /* 状态栏 */
+        .status-bar {
+            height: 44px;
+            background-color: var(--white);
+            padding: 10px 16px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .status-bar-time {
+            font-weight: 600;
+            font-size: 14px;
+            color: var(--text-dark);
+        }
+        
+        .status-bar-icons {
+            display: flex;
+            align-items: center;
+        }
+        
+        .status-bar-icons > div {
+            margin-left: 4px;
+        }
+        
+        /* Onboarding 内容 */
+        .onboarding-container {
+            height: calc(100% - 44px);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .onboarding-slider {
+            height: 100%;
+            display: flex;
+            transition: transform var(--transition-normal);
+        }
+        
+        .onboarding-slide {
+            min-width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: var(--spacing-xl);
+            position: relative;
+        }
+        
+        .slide-image {
+            width: 80%;
+            height: 40%;
+            margin: var(--spacing-xl) 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+        
+        .slide-content {
+            text-align: center;
+            margin-bottom: var(--spacing-xl);
+        }
+        
+        .slide-title {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: var(--spacing-md);
+            color: var(--primary-color);
+        }
+        
+        .slide-description {
+            font-size: 16px;
+            color: var(--text-medium);
+            margin-bottom: var(--spacing-lg);
+            padding: 0 var(--spacing-md);
+        }
+        
+        .onboarding-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            padding: 0 var(--spacing-md);
+            margin-top: auto;
+            margin-bottom: var(--spacing-xl);
+        }
+        
+        .nav-button {
+            background: none;
+            border: none;
+            font-size: 16px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: color var(--transition-fast);
+            color: var(--text-medium);
+        }
+        
+        .nav-button:hover {
+            color: var(--primary-color);
+        }
+        
+        .nav-button.primary {
+            background-color: var(--primary-color);
+            color: white;
+            padding: var(--spacing-sm) var(--spacing-xl);
+            border-radius: 20px;
+            box-shadow: 0 4px 10px rgba(106, 90, 205, 0.3);
+            transition: all var(--transition-fast);
+        }
+        
+        .nav-button.primary:hover {
+            background-color: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 14px rgba(106, 90, 205, 0.4);
+        }
+        
+        .dots-container {
+            display: flex;
+            justify-content: center;
+            margin-bottom: var(--spacing-lg);
+        }
+        
+        .dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background-color: var(--text-light);
+            margin: 0 var(--spacing-xs);
+            transition: all var(--transition-fast);
+        }
+        
+        .dot.active {
+            width: 20px;
+            border-radius: 4px;
+            background-color: var(--primary-color);
+        }
+        
+        /* 动画元素 */
+        .floating-element {
+            position: absolute;
+            animation: float 4s infinite ease-in-out;
+        }
+        
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-15px);
+            }
+        }
+        
+        /* 特定幻灯片样式 */
+        /* 幻灯片1：欢迎页面 */
+        .welcome-circle {
+            width: 240px;
+            height: 240px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary-light), var(--primary-color));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 10px 30px rgba(106, 90, 205, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .welcome-circle::before {
+            content: '';
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            background: linear-gradient(to right, var(--primary-color), transparent);
+            animation: rotate 8s linear infinite;
+        }
+        
+        .welcome-circle::after {
+            content: '';
+            position: absolute;
+            width: 260px;
+            height: 260px;
+            background: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .welcome-icon {
+            width: 100px;
+            height: 100px;
+            position: relative;
+            z-index: 10;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%236a5acd"><path d="M20 22H4C3.44772 22 3 21.5523 3 21V3C3 2.44772 3.44772 2 4 2H20C20.5523 2 21 2.44772 21 3V21C21 21.5523 20.5523 22 20 22ZM19 20V4H5V20H19ZM8 9H16V11H8V9ZM8 13H16V15H8V13Z"/></svg>');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+        }
+        
+        @keyframes rotate {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+        
+        /* 幻灯片2：发现真我 */
+        .discovery-illustration {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .mirror-frame {
+            width: 180px;
+            height: 240px;
+            border: 8px solid var(--secondary-color);
+            border-radius: 90px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 10px 25px rgba(95, 201, 194, 0.3);
+            transform: perspective(800px) rotateY(5deg);
+            background: linear-gradient(to bottom right, rgba(255,255,255,0.4), rgba(255,255,255,0.1));
+        }
+        
+        .mirror-reflection {
+            width: 100px;
+            height: 100px;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%236a5acd"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 15c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5z"/></svg>');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            opacity: 0.7;
+        }
+        
+        .light-beam {
+            position: absolute;
+            width: 50px;
+            height: 200px;
+            background: linear-gradient(to bottom, var(--primary-light), transparent);
+            transform: rotate(45deg);
+            top: -30px;
+            right: 20px;
+            opacity: 0.5;
+            animation: lightMove 4s infinite alternate;
+        }
+        
+        @keyframes lightMove {
+            0% {
+                transform: rotate(45deg) translateX(0);
+                opacity: 0.3;
+            }
+            100% {
+                transform: rotate(45deg) translateX(-20px);
+                opacity: 0.6;
+            }
+        }
+        
+        /* 幻灯片3：设定目标 */
+        .goals-illustration {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .goal-mountain {
+            width: 240px;
+            height: 160px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .mountain {
+            position: absolute;
+            bottom: 0;
+            border-radius: 8px;
+        }
+        
+        .mountain-1 {
+            width: 160px;
+            height: 100px;
+            background: linear-gradient(to top, var(--primary-dark), var(--primary-color));
+            left: 0;
+            z-index: 1;
+            clip-path: polygon(0% 100%, 50% 0%, 100% 100%);
+        }
+        
+        .mountain-2 {
+            width: 120px;
+            height: 70px;
+            background: linear-gradient(to top, var(--secondary-dark), var(--secondary-color));
+            left: 100px;
+            bottom: 0;
+            z-index: 2;
+            clip-path: polygon(0% 100%, 50% 0%, 100% 100%);
+        }
+        
+        .flag {
+            position: absolute;
+            top: 10px;
+            right: 60px;
+            z-index: 3;
+            width: 30px;
+            height: 40px;
+        }
+        
+        .flag-pole {
+            width: 3px;
+            height: 40px;
+            background-color: white;
+            position: absolute;
+            left: 0;
+        }
+        
+        .flag-cloth {
+            width: 25px;
+            height: 15px;
+            background-color: var(--secondary-light);
+            position: absolute;
+            left: 3px;
+            top: 5px;
+            clip-path: polygon(0% 0%, 100% 0%, 80% 50%, 100% 100%, 0% 100%);
+            animation: flagWave 2s infinite ease-in-out;
+        }
+        
+        @keyframes flagWave {
+            0%, 100% {
+                transform: skewX(0deg);
+            }
+            50% {
+                transform: skewX(-10deg);
+            }
+        }
+        
+        /* 幻灯片4：连接社群 */
+        .connection-illustration {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .connection-circle {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .connection-circle-1 {
+            background-color: var(--primary-light);
+            left: 40px;
+        }
+        
+        .connection-circle-2 {
+            background-color: var(--secondary-light);
+            right: 40px;
+        }
+        
+        .connection-circle-3 {
+            background-color: var(--primary-color);
+            top: 20px;
+        }
+        
+        .connection-circle-4 {
+            background-color: var(--secondary-color);
+            bottom: 20px;
+        }
+        
+        .connection-line {
+            position: absolute;
+            height: 2px;
+            background: linear-gradient(to right, var(--primary-light), var(--secondary-light));
+            animation: lineGrow 2s forwards ease-in-out;
+            transform-origin: left;
+        }
+        
+        @keyframes lineGrow {
+            0% {
+                transform: scaleX(0);
+            }
+            100% {
+                transform: scaleX(1);
+            }
+        }
+        
+        .connection-line-1 {
+            width: 120px;
+            transform: rotate(45deg);
+            left: 80px;
+            top: 80px;
+            animation-delay: 0.5s;
+        }
+        
+        .connection-line-2 {
+            width: 80px;
+            transform: rotate(-45deg);
+            right: 80px;
+            top: 120px;
+            animation-delay: 0.3s;
+        }
+        
+        .connection-line-3 {
+            width: 140px;
+            transform: rotate(0deg);
+            left: 80px;
+            top: 100px;
+            animation-delay: 0.1s;
+        }
+        
+        .person-icon {
+            width: 40px;
+            height: 40px;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white"><path d="M12 12C14.21 12 16 10.21 16 8C16 5.79 14.21 4 12 4C9.79 4 8 5.79 8 8C8 10.21 9.79 12 12 12ZM12 14C9.33 14 4 15.34 4 18V20H20V18C20 15.34 14.67 14 12 14Z"/></svg>');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+        }
+    </style>
+</head>
+<body>
+    <div class="device-frame">
+        <!-- 状态栏 -->
+        <div class="status-bar">
+            <div class="status-bar-time">12:45</div>
+            <div class="status-bar-icons">
+                <div class="signal-icon">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4 18L10 18" stroke="#333" stroke-width="2" stroke-linecap="round"/>
+                        <path d="M4 14L14 14" stroke="#333" stroke-width="2" stroke-linecap="round"/>
+                        <path d="M4 10L18 10" stroke="#333" stroke-width="2" stroke-linecap="round"/>
+                        <path d="M4 6L22 6" stroke="#333" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                </div>
+                <div class="wifi-icon">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 19.5L12 19.5" stroke="#333" stroke-width="2" stroke-linecap="round"/>
+                        <path d="M8.5 16C9.88 14.7 13.12 14.7 14.5 16" stroke="#333" stroke-width="2" stroke-linecap="round"/>
+                        <path d="M5 12.5C8 9.5 16 9.5 19 12.5" stroke="#333" stroke-width="2" stroke-linecap="round"/>
+                        <path d="M1.5 9C6.5 4 17.5 4 22.5 9" stroke="#333" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                </div>
+                <div class="battery-icon">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="2" y="7" width="18" height="10" rx="2" stroke="#333" stroke-width="2"/>
+                        <path d="M21 11H22C22.5523 11 23 11.4477 23 12V12C23 12.5523 22.5523 13 22 13H21V11Z" fill="#333"/>
+                        <rect x="5" y="10" width="11" height="4" fill="#333"/>
+                    </svg>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Onboarding 内容 -->
+        <div class="onboarding-container">
+            <div class="onboarding-slider" style="transform: translateX(0%);">
+                <!-- 幻灯片 1: 欢迎页面 -->
+                <div class="onboarding-slide">
+                    <div class="slide-image">
+                        <div class="welcome-circle">
+                            <div class="welcome-icon"></div>
+                        </div>
+                    </div>
+                    <div class="slide-content">
+                        <h1 class="slide-title">欢迎来到重塑人生</h1>
+                        <p class="slide-description">开启一段为期50天的自我发现之旅，摆脱束缚，找回真实的自己</p>
+                    </div>
+                    <div class="dots-container">
+                        <div class="dot active"></div>
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                    </div>
+                    <div class="onboarding-nav">
+                        <button class="nav-button" onclick="skipOnboarding()">跳过</button>
+                        <button class="nav-button primary" onclick="nextSlide()">继续</button>
+                    </div>
+                </div>
+                
+                <!-- 幻灯片 2: 发现真我 -->
+                <div class="onboarding-slide">
+                    <div class="slide-image">
+                        <div class="discovery-illustration">
+                            <div class="mirror-frame">
+                                <div class="mirror-reflection"></div>
+                            </div>
+                            <div class="light-beam"></div>
+                        </div>
+                    </div>
+                    <div class="slide-content">
+                        <h1 class="slide-title">发现真实的自己</h1>
+                        <p class="slide-description">通过专业的评估和引导练习，重新认识自己的兴趣、能力和价值观</p>
+                    </div>
+                    <div class="dots-container">
+                        <div class="dot"></div>
+                        <div class="dot active"></div>
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                    </div>
+                    <div class="onboarding-nav">
+                        <button class="nav-button" onclick="prevSlide()">上一步</button>
+                        <button class="nav-button primary" onclick="nextSlide()">继续</button>
+                    </div>
+                </div>
+                
+                <!-- 幻灯片 3: 设定目标 -->
+                <div class="onboarding-slide">
+                    <div class="slide-image">
+                        <div class="goals-illustration">
+                            <div class="goal-mountain">
+                                <div class="mountain mountain-1"></div>
+                                <div class="mountain mountain-2"></div>
+                                <div class="flag">
+                                    <div class="flag-pole"></div>
+                                    <div class="flag-cloth"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide-content">
+                        <h1 class="slide-title">50天系统化成长计划</h1>
+                        <p class="slide-description">科学设计的五个阶段，每天只需15-30分钟，循序渐进地改变思维模式，建立健康的自我认知</p>
+                    </div>
+                    <div class="dots-container">
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                        <div class="dot active"></div>
+                        <div class="dot"></div>
+                    </div>
+                    <div class="onboarding-nav">
+                        <button class="nav-button" onclick="prevSlide()">上一步</button>
+                        <button class="nav-button primary" onclick="nextSlide()">继续</button>
+                    </div>
+                </div>
+                
+                <!-- 幻灯片 4: 连接社群 -->
+                <div class="onboarding-slide">
+                    <div class="slide-image">
+                        <div class="connection-illustration">
+                            <div class="connection-circle connection-circle-1">
+                                <div class="person-icon"></div>
+                            </div>
+                            <div class="connection-circle connection-circle-2">
+                                <div class="person-icon"></div>
+                            </div>
+                            <div class="connection-circle connection-circle-3">
+                                <div class="person-icon"></div>
+                            </div>
+                            <div class="connection-circle connection-circle-4">
+                                <div class="person-icon"></div>
+                            </div>
+                            <div class="connection-line connection-line-1"></div>
+                            <div class="connection-line connection-line-2"></div>
+                            <div class="connection-line connection-line-3"></div>
+                        </div>
+                    </div>
+                    <div class="slide-content">
+                        <h1 class="slide-title">连接成长社群</h1>
+                        <p class="slide-description">加入志同道合的朋友圈，分享成长经验，获得支持和鼓励，共同进步</p>
+                    </div>
+                    <div class="dots-container">
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                        <div class="dot active"></div>
+                    </div>
+                    <div class="onboarding-nav">
+                        <button class="nav-button" onclick="prevSlide()">上一步</button>
+                        <button class="nav-button primary" onclick="startApp()">开始体验</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        let currentSlide = 0;
+        const totalSlides = 4;
+        const slider = document.querySelector('.onboarding-slider');
+        
+        function updateSlider() {
+            slider.style.transform = `translateX(-${currentSlide * 100}%)`;
+            
+            // 更新小点
+            document.querySelectorAll('.dot').forEach((dot, index) => {
+                if (index === currentSlide) {
+                    dot.classList.add('active');
+                } else {
+                    dot.classList.remove('active');
+                }
+            });
+        }
+        
+        function nextSlide() {
+            if (currentSlide < totalSlides - 1) {
+                currentSlide++;
+                updateSlider();
+            }
+        }
+        
+        function prevSlide() {
+            if (currentSlide > 0) {
+                currentSlide--;
+                updateSlider();
+            }
+        }
+        
+        function skipOnboarding() {
+            // 跳过引导，直接进入应用
+            startApp();
+        }
+        
+        function startApp() {
+            // 引导完成，进入应用主界面
+            alert('引导完成！即将进入应用主界面...');
+            
+            // 这里可以添加重定向到主应用的逻辑
+            // window.location.href = 'main.html';
+        }
+    </script>
+</body>
+</html>

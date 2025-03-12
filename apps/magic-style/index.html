@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>重塑人生 - 魔法奇幻风格</title>
+    <style>
+        /* 重置样式 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+        }
+        
+        :root {
+            /* 魔法奇幻风格色彩方案 */
+            --primary: #8952e0; /* 紫色基调 */
+            --primary-light: #b184ff;
+            --primary-dark: #6333b1;
+            --secondary: #ff9f43; /* 橙色辅助 */
+            --secondary-light: #ffbe76;
+            --secondary-dark: #e07a14;
+            --accent: #3fc8e0; /* 亮蓝色点缀 */
+            --bg-color: #1e1a2c; /* 深色背景 */
+            --card-bg: #2d2641; /* 卡片背景 */
+            --text-light: #f5f8ff;
+            --text-medium: #cccce0;
+            --text-dark: #9696b2;
+        }
+        
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-light);
+            font-size: 16px;
+            line-height: 1.5;
+        }
+        
+        /* 模拟iPhone 15 Pro设备尺寸 */
+        .device-frame {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            position: relative;
+            background-image: 
+                radial-gradient(circle at 30% 20%, rgba(137, 82, 224, 0.15) 0%, transparent 40%),
+                radial-gradient(circle at 70% 60%, rgba(255, 159, 67, 0.1) 0%, transparent 30%),
+                radial-gradient(circle at 90% 90%, rgba(63, 200, 224, 0.1) 0%, transparent 20%);
+        }
+        
+        /* 星星背景 */
+        .stars-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+            background-image: 
+                radial-gradient(1px 1px at 50px 100px, white, rgba(255, 255, 255, 0)),
+                radial-gradient(1px 1px at 100px 250px, white, rgba(255, 255, 255, 0)),
+                radial-gradient(1px 1px at 150px 350px, white, rgba(255, 255, 255, 0)),
+                radial-gradient(1px 1px at 200px 50px, white, rgba(255, 255, 255, 0)),
+                radial-gradient(1px 1px at 250px 200px, white, rgba(255, 255, 255, 0)),
+                radial-gradient(1px 1px at 300px 300px, white, rgba(255, 255, 255, 0)),
+                radial-gradient(1px 1px at 50px 400px, white, rgba(255, 255, 255, 0)),
+                radial-gradient(1px 1px at 350px 150px, white, rgba(255, 255, 255, 0));
+            opacity: 0.3;
+        }
+        
+        /* 状态栏 */
+        .status-bar {
+            height: 44px;
+            background-color: rgba(30, 26, 44, 0.8);
+            backdrop-filter: blur(10px);
+            padding: 10px 16px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid rgba(137, 82, 224, 0.2);
+        }
+        
+        .status-bar-time {
+            font-weight: 600;
+            font-size: 14px;
+            color: var(--text-light);
+        }
+        
+        .status-bar-icons {
+            display: flex;
+            align-items: center;
+        }
+        
+        .status-bar-icons > div {
+            margin-left: 4px;
+        }
+        
+        .signal-icon, .wifi-icon, .battery-icon {
+            display: inline-block;
+            width: 18px;
+            height: 18px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        
+        /* 主界面内容 */
+        .app-content {
+            padding: 24px 20px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        /* 魔法欢迎区域 */
+        .welcome-section {
+            text-align: center;
+            margin-bottom: 30px;
+            position: relative;
+        }
+        
+        .magic-circle {
+            position: absolute;
+            top: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 200px;
+            height: 200px;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><circle cx="100" cy="100" r="80" fill="none" stroke="%238952e0" stroke-width="1" stroke-dasharray="3,3"/><circle cx="100" cy="100" r="60" fill="none" stroke="%23ff9f43" stroke-width="1"/><path d="M100,20 L100,180 M20,100 L180,100 M35,35 L165,165 M35,165 L165,35" stroke="%233fc8e0" stroke-width="0.5" opacity="0.5"/></svg>');
+            background-repeat: no-repeat;
+            opacity: 0.2;
+            animation: rotate 40s linear infinite;
+            z-index: -1;
+        }
+        
+        @keyframes rotate {
+            from { transform: translateX(-50%) rotate(0deg); }
+            to { transform: translateX(-50%) rotate(360deg); }
+        }
+        
+        .welcome-title {
+            font-size: 28px;
+            font-weight: 600;
+            color: var(--text-light);
+            margin-bottom: 12px;
+            background: linear-gradient(to right, var(--primary-light), var(--accent), var(--secondary-light));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: inline-block;
+        }
+        
+        .welcome-subtitle {
+            font-size: 16px;
+            color: var(--text-medium);
+            margin-bottom: 20px;
+        }
+        
+        /* 魔法等级 */
+        .magic-level {
+            background-color: var(--card-bg);
+            border-radius: 16px;
+            padding: 18px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3), 
+                        inset 0 0 20px rgba(137, 82, 224, 0.2);
+            margin-bottom: 24px;
+            border: 1px solid rgba(137, 82, 224, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .level-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 16px;
+        }
+        
+        .level-title {
+            display: flex;
+            align-items: center;
+        }
+        
+        .level-icon {
+            width: 26px;
+            height: 26px;
+            margin-right: 10px;
+        }
+        
+        .level-name {
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--text-light);
+        }
+        
+        .level-number {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--secondary);
+            background: linear-gradient(to right, var(--secondary), var(--secondary-light));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .level-progress-wrapper {
+            background-color: rgba(255, 255, 255, 0.1);
+            height: 8px;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+        
+        .day-progress {
+            margin-bottom: 20px;
+        }
+        
+        .day-progress-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        
+        .day-title {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--text-medium);
+        }
+        
+        .day-counter {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--text-medium);
+        }
+        
+        .day-progress-bar-wrapper {
+            background-color: rgba(255, 255, 255, 0.1);
+            height: 8px;
+            border-radius: 4px;
+            overflow: hidden;
+            margin-bottom: 10px;
+        }
+        
+        .day-progress-bar {
+            background-color: var(--primary);
+            height: 8px;
+            border-radius: 4px;
+        }
+        
+        .day-phase {
+            font-size: 16px;
+            color: var(--text-medium);
+        }
+    </style>
+</head>
+<body>
+    <div class="device-frame">
+        <div class="stars-bg"></div>
+        <div class="status-bar">
+            <div class="status-bar-time">12:34</div>
+            <div class="status-bar-icons">
+                <div class="signal-icon"></div>
+                <div class="wifi-icon"></div>
+                <div class="battery-icon"></div>
+            </div>
+        </div>
+        <div class="app-content">
+            <div class="welcome-section">
+                <div class="magic-circle"></div>
+                <h1 class="welcome-title">魔法50天重塑计划</h1>
+                <p class="welcome-subtitle">今天是你的第7天，继续坚持探索自我</p>
+                <div class="day-progress">
+                    <div class="day-progress-header">
+                        <div class="day-title">50天重塑计划</div>
+                        <div class="day-counter">第7天 / 50天</div>
+                    </div>
+                    <div class="day-progress-bar-wrapper">
+                        <div class="day-progress-bar" style="width: 14%;"></div>
+                    </div>
+                    <div class="day-phase">当前阶段：认知觉醒期（第1-10天）</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

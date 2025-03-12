@@ -1,0 +1,308 @@
+/* 响应式设计 */
+
+/* 大型平板和小型桌面 */
+@media (max-width: 1200px) {
+  .container {
+    padding: 0 var(--spacing-md);
+  }
+  
+  h1 {
+    font-size: 2.8rem;
+  }
+  
+  h2 {
+    font-size: 2.2rem;
+  }
+  
+  .hero-image {
+    width: 45%;
+  }
+}
+
+/* 中型平板 */
+@media (max-width: 992px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+  
+  h2 {
+    font-size: 2rem;
+  }
+  
+  h3 {
+    font-size: 1.3rem;
+  }
+  
+  .hero .container {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .hero-content {
+    max-width: 100%;
+    margin-bottom: var(--spacing-xl);
+  }
+  
+  .hero-cta {
+    justify-content: center;
+  }
+  
+  .hero-stats {
+    justify-content: center;
+  }
+  
+  .hero-image {
+    width: 60%;
+    max-width: 300px;
+  }
+  
+  .pain-points-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .benefits-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .tab-content-inner {
+    flex-direction: column;
+  }
+  
+  .tab-text {
+    width: 100%;
+    padding-right: 0;
+    margin-bottom: var(--spacing-lg);
+  }
+  
+  .tab-image {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  
+  .pricing-cards {
+    gap: var(--spacing-md);
+  }
+  
+  .pricing-card {
+    max-width: 300px;
+  }
+  
+  .download .container {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .download-content {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: var(--spacing-xl);
+  }
+  
+  .download h2 {
+    text-align: center;
+  }
+  
+  .app-stores {
+    justify-content: center;
+  }
+  
+  .download-qr {
+    justify-content: center;
+  }
+  
+  .download-image {
+    width: 60%;
+    max-width: 300px;
+  }
+}
+
+/* 小型平板和大型手机 */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 var(--spacing-sm);
+  }
+  
+  section {
+    padding: var(--spacing-xl) 0;
+  }
+  
+  h1 {
+    font-size: 2.2rem;
+    margin-bottom: var(--spacing-md);
+  }
+  
+  h2 {
+    font-size: 1.8rem;
+    margin-bottom: var(--spacing-lg);
+  }
+  
+  .main-nav {
+    display: none;
+  }
+  
+  .mobile-menu-toggle {
+    display: flex;
+  }
+  
+  .hero-content {
+    margin-bottom: var(--spacing-lg);
+  }
+  
+  .hero-stats {
+    flex-direction: column;
+    gap: var(--spacing-md);
+  }
+  
+  .stat {
+    flex-direction: row;
+    align-items: center;
+    gap: var(--spacing-sm);
+  }
+  
+  .pain-points-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+  }
+  
+  .benefits-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+  }
+  
+  .features-tabs-nav {
+    flex-wrap: wrap;
+    gap: var(--spacing-xs);
+  }
+  
+  .tab-btn {
+    padding: var(--spacing-sm) var(--spacing-md);
+  }
+  
+  .app-styles-nav {
+    flex-wrap: wrap;
+    gap: var(--spacing-xs);
+  }
+  
+  .style-btn {
+    padding: var(--spacing-sm) var(--spacing-md);
+    margin-bottom: var(--spacing-xs);
+  }
+  
+  .pricing-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .pricing-card {
+    max-width: 100%;
+  }
+  
+  .pricing-card.popular {
+    transform: scale(1);
+    order: -1;
+    margin-bottom: var(--spacing-md);
+  }
+  
+  .pricing-card.popular:hover {
+    transform: scale(1) translateY(-8px);
+  }
+  
+  .footer-top {
+    flex-direction: column;
+    gap: var(--spacing-lg);
+  }
+  
+  .footer-nav {
+    flex-direction: column;
+  }
+  
+  .footer-nav-column {
+    width: 100%;
+    margin-bottom: var(--spacing-md);
+  }
+  
+  .footer-bottom {
+    flex-direction: column;
+    gap: var(--spacing-md);
+    text-align: center;
+  }
+}
+
+/* 中小型手机 */
+@media (max-width: 576px) {
+  h1 {
+    font-size: 2rem;
+  }
+  
+  h2 {
+    font-size: 1.6rem;
+  }
+  
+  .section-subtitle {
+    font-size: 1rem;
+  }
+  
+  .hero-cta {
+    flex-direction: column;
+    gap: var(--spacing-sm);
+  }
+  
+  .hero-cta .btn {
+    width: 100%;
+  }
+  
+  .step {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .step-number {
+    margin-right: 0;
+    margin-bottom: var(--spacing-md);
+  }
+  
+  .step:not(:last-child)::after {
+    display: none;
+  }
+  
+  .testimonial-card {
+    padding: var(--spacing-md);
+  }
+  
+  .testimonial-author {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .testimonial-author img {
+    margin-right: 0;
+    margin-bottom: var(--spacing-sm);
+  }
+  
+  .pricing-guarantee {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .guarantee-icon {
+    margin-right: 0;
+    margin-bottom: var(--spacing-md);
+  }
+  
+  .app-stores {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .download-qr {
+    flex-direction: column;
+  }
+  
+  .download-qr img {
+    margin-right: 0;
+    margin-bottom: var(--spacing-sm);
+  }
+}
+

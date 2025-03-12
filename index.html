@@ -1,132 +1,937 @@
-<!DOCTYPE html>
-<html lang="en">
-
+<html lang="zh">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- SEO Meta Tags -->
-  <meta name="description" content="A mobile simulator designed to demonstrate mobile interface design.">
-  <meta name="keywords" content="mobile, simulator, mobile design, mobile app">
-  <meta name="author" content="Your Name or Company">
-  <meta http-equiv="Content-Language" content="en">
-
-  <!-- Canonical Link -->
-  <link rel="canonical" href="https://www.yourwebsite.com/pc-simulator" />
-
-  <!-- Open Graph for Social Media -->
-  <meta property="og:title" content="PC Simulator">
-  <meta property="og:description" content="A mobile simulator designed to demonstrate mobile interface design.">
-  <meta property="og:image" content="https://www.yourwebsite.com/pc-simulator-image.jpg">
-  <meta property="og:url" content="https://www.yourwebsite.com/pc-simulator">
-  <meta property="og:type" content="website">
-
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="PC Simulator">
-  <meta name="twitter:description" content="A mobile simulator designed to demonstrate mobile interface design.">
-  <meta name="twitter:image" content="https://www.yourwebsite.com/pc-simulator-image.jpg">
-  <meta name="twitter:creator" content="@yourtwitterhandle">
-
-  <!-- Favicon -->
-  <link rel="icon" href="https://www.yourwebsite.com/favicon.ico" type="image/x-icon">
-
-  <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-XXXXX-Y"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-    gtag('js', new Date());
-    gtag('config', 'UA-XXXXX-Y');
-  </script>
-
-  <!-- Microsoft Clarity -->
-  <script type="text/javascript">
-    (function(c,l,a,r,i,t,y) {
-      window.clarity=window.clarity||function(){(clarity.q=clarity.q||[]).push(arguments)};
-      clarity('set', 'anonymizeIP', true);
-      i=l.createElement('script');i.async=1;i.src=r;i.type='text/javascript';
-      t=l.getElementsByTagName('script')[0];t.parentNode.insertBefore(i,t);
-    })(document,window,'script','https://www.clarity.ms/tag/XXXXXX');
-  </script>
-
-  <title>PC Simulator</title>
-
-  <style>
-    /* Global Styles */
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #f0f0f0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      text-align: center;
-    }
-
-    .mobile-container {
-      width: 360px;
-      height: 640px;
-      border: 16px solid black;
-      border-radius: 16px;
-      background-color: #fff;
-      position: relative;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .content {
-      font-size: 1.2rem;
-      color: #333;
-    }
-
-    /* Adjustments for PC */
-    @media (min-width: 768px) {
-      .mobile-container {
-        width: 600px;
-        height: 1000px;
-      }
-
-      .content {
-        font-size: 1.5rem;
-      }
-    }
-
-    @media (min-width: 1024px) {
-      .mobile-container {
-        width: 800px;
-        height: 1400px;
-      }
-
-      .content {
-        font-size: 1.8rem;
-      }
-    }
-
-    /* Additional responsiveness for larger screens */
-    @media (min-width: 1200px) {
-      body {
-        justify-content: flex-start;
-      }
-
-      .mobile-container {
-        margin-top: 50px;
-      }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>重塑人生 - 50天逆转人生计划</title>
+    <meta name="description" content="重塑人生是一款专为那些长期受到父母规训和压抑，导致缺乏自我探索和不够爱自己的人设计的应用程序。通过50天系统化计划，帮助您重新认识自己，提升自信和自尊，建立健康的社交关系，实现人生的真正逆转。">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-
 <body>
-  <div class="mobile-container">
-    <div class="content">
-      <p>Mobile Simulator Screen</p>
-      <p>PC Version: Adjusted for larger screens.</p>
-    </div>
-  </div>
-</body>
+    <header class="header">
+        <div class="container">
+            <div class="header-inner">
+                <div class="logo">
+                    <img src="img/logo.svg" alt="重塑人生 Logo">
+                    <span>重塑人生</span>
+                </div>
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="#features">核心功能</a></li>
+                        <li><a href="#benefits">你将收获</a></li>
+                        <li><a href="#testimonials">用户反馈</a></li>
+                        <li><a href="#app-preview">App预览</a></li>
+                        <li><a href="#pricing">订阅方案</a></li>
+                    </ul>
+                </nav>
+                <div class="language-switch">
+                    <button class="lang-btn active" data-lang="zh">中文</button>
+                    <button class="lang-btn" data-lang="en">EN</button>
+                </div>
+                <button class="mobile-menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
 
+    <div class="mobile-menu">
+        <ul>
+            <li><a href="#features">核心功能</a></li>
+            <li><a href="#benefits">你将收获</a></li>
+            <li><a href="#testimonials">用户反馈</a></li>
+            <li><a href="#app-preview">App预览</a></li>
+            <li><a href="#pricing">订阅方案</a></li>
+        </ul>
+        <div class="mobile-language-switch">
+            <button class="lang-btn active" data-lang="zh">中文</button>
+            <button class="lang-btn" data-lang="en">EN</button>
+        </div>
+    </div>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 data-i18n="hero.title">50天<span class="highlight">父母规训</span>逆转计划，<br>开启<span class="highlight">自我重塑</span>之旅</h1>
+                <p data-i18n="hero.subtitle">专为那些长期受到父母规训和压抑，导致缺乏自我探索和不够爱自己的人设计，通过50天系统化计划，帮助你重建自信、自尊和自我认同</p>
+                <div class="hero-cta">
+                    <a href="#app-preview" class="btn btn-primary" data-i18n="hero.cta.tryNow">立即体验</a>
+                    <a href="#features" class="btn btn-secondary" data-i18n="hero.cta.learnMore">了解更多</a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number">100,000+</span>
+                        <span class="stat-desc" data-i18n="hero.stats.users">活跃用户</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">4.8</span>
+                        <span class="stat-desc" data-i18n="hero.stats.rating">App Store 评分</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">83%</span>
+                        <span class="stat-desc" data-i18n="hero.stats.improvement">用户报告自信显著提升</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="img/hero-app.png" alt="重塑人生 App 展示">
+                <div class="hero-image-overlay"></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="pain-points" id="pain-points">
+        <div class="container">
+            <h2 data-i18n="painPoints.title">你是否有这些困扰？</h2>
+            <div class="pain-points-grid">
+                <div class="pain-point">
+                    <div class="pain-point-icon">
+                        <i class="fas fa-user-slash"></i>
+                    </div>
+                    <h3 data-i18n="painPoints.identity.title">身份认同感缺失</h3>
+                    <p data-i18n="painPoints.identity.desc">长期按照父母期望生活，不清楚自己真正想要什么，难以建立自己的身份认同</p>
+                </div>
+                <div class="pain-point">
+                    <div class="pain-point-icon">
+                        <i class="fas fa-heart-broken"></i>
+                    </div>
+                    <h3 data-i18n="painPoints.confidence.title">自信与自尊不足</h3>
+                    <p data-i18n="painPoints.confidence.desc">过度批评和否定使你难以相信自己的能力，害怕失败，不敢尝试新事物</p>
+                </div>
+                <div class="pain-point">
+                    <div class="pain-point-icon">
+                        <i class="fas fa-people-arrows"></i>
+                    </div>
+                    <h3 data-i18n="painPoints.boundaries.title">边界感模糊</h3>
+                    <p data-i18n="painPoints.boundaries.desc">难以对父母说"不"，过度在意他人评价，牺牲自己的需求来取悦他人</p>
+                </div>
+                <div class="pain-point">
+                    <div class="pain-point-icon">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <h3 data-i18n="painPoints.communication.title">沟通困难</h3>
+                    <p data-i18n="painPoints.communication.desc">与父母交流时感到紧张、焦虑，无法表达真实想法，容易陷入冲突或回避</p>
+                </div>
+                <div class="pain-point">
+                    <div class="pain-point-icon">
+                        <i class="fas fa-user-friends"></i>
+                    </div>
+                    <h3 data-i18n="painPoints.social.title">社交圈狭窄</h3>
+                    <p data-i18n="painPoints.social.desc">缺乏社交信心，朋友圈有限，难以建立亲密关系，容易感到孤独</p>
+                </div>
+                <div class="pain-point">
+                    <div class="pain-point-icon">
+                        <i class="fas fa-route"></i>
+                    </div>
+                    <h3 data-i18n="painPoints.direction.title">人生方向迷失</h3>
+                    <p data-i18n="painPoints.direction.desc">不清楚自己的兴趣、价值观和目标，对未来感到迷茫，缺乏前进的动力</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="features" id="features">
+        <div class="container">
+            <h2 data-i18n="features.title">六大核心功能，全方位重塑自我</h2>
+            <p class="section-subtitle" data-i18n="features.subtitle">专业心理学工具与实用技能的完美结合，帮助你逐步重获自信与自主</p>
+            
+            <div class="features-tabs">
+                <div class="features-tabs-nav">
+                    <button class="tab-btn active" data-tab="self-discovery">
+                        <i class="fas fa-search"></i>
+                        <span data-i18n="features.tabs.selfDiscovery">自我探索</span>
+                    </button>
+                    <button class="tab-btn" data-tab="self-care">
+                        <i class="fas fa-heart"></i>
+                        <span data-i18n="features.tabs.selfCare">自我关爱</span>
+                    </button>
+                    <button class="tab-btn" data-tab="goal-setting">
+                        <i class="fas fa-bullseye"></i>
+                        <span data-i18n="features.tabs.goalSetting">目标设定</span>
+                    </button>
+                    <button class="tab-btn" data-tab="communication">
+                        <i class="fas fa-comments"></i>
+                        <span data-i18n="features.tabs.communication">沟通技巧</span>
+                    </button>
+                    <button class="tab-btn" data-tab="social-expansion">
+                        <i class="fas fa-users"></i>
+                        <span data-i18n="features.tabs.socialExpansion">社交拓展</span>
+                    </button>
+                    <button class="tab-btn" data-tab="learning-growth">
+                        <i class="fas fa-brain"></i>
+                        <span data-i18n="features.tabs.learningGrowth">学习成长</span>
+                    </button>
+                </div>
+                
+                <div class="features-tabs-content">
+                    <div class="tab-content active" id="self-discovery">
+                        <div class="tab-content-inner">
+                            <div class="tab-text">
+                                <h3 data-i18n="features.selfDiscovery.title">自我探索模块</h3>
+                                <p data-i18n="features.selfDiscovery.desc">通过专业测试与引导练习，重新认识真实的自己</p>
+                                <ul class="feature-list">
+                                    <li data-i18n="features.selfDiscovery.list.item1">
+                                        <strong>性格测试：</strong>基于专业心理学理论，帮助你了解自己的性格特点、优势和劣势
+                                    </li>
+                                    <li data-i18n="features.selfDiscovery.list.item2">
+                                        <strong>兴趣爱好探索：</strong>通过互动式问题与活动，引导你发现被忽视的兴趣爱好
+                                    </li>
+                                    <li data-i18n="features.selfDiscovery.list.item3">
+                                        <strong>价值观评估：</strong>明确你真正看重的生活原则和信念，为决策提供内在指南
+                                    </li>
+                                </ul>
+                                <a href="#app-preview" class="btn btn-text" data-i18n="features.tryFeature">体验此功能 <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                            <div class="tab-image">
+                                <img src="img/feature-self-discovery.png" alt="自我探索功能展示">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Other tabs contents will be similar structure -->
+                    <div class="tab-content" id="self-care">
+                        <div class="tab-content-inner">
+                            <div class="tab-text">
+                                <h3 data-i18n="features.selfCare.title">自我关爱模块</h3>
+                                <p data-i18n="features.selfCare.desc">学习接纳、爱护自己，建立健康的自我关系</p>
+                                <ul class="feature-list">
+                                    <li data-i18n="features.selfCare.list.item1">
+                                        <strong>正念练习：</strong>通过引导冥想，帮助你关注当下，接纳情绪，缓解压力与焦虑
+                                    </li>
+                                    <li data-i18n="features.selfCare.list.item2">
+                                        <strong>自我肯定练习：</strong>每日提供正面的自我暗示，帮助重建积极的自我形象
+                                    </li>
+                                    <li data-i18n="features.selfCare.list.item3">
+                                        <strong>情绪记录：</strong>追踪情绪变化，识别触发因素，学会更好地管理情绪
+                                    </li>
+                                </ul>
+                                <a href="#app-preview" class="btn btn-text" data-i18n="features.tryFeature">体验此功能 <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                            <div class="tab-image">
+                                <img src="img/feature-self-care.png" alt="自我关爱功能展示">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tab-content" id="goal-setting">
+                        <div class="tab-content-inner">
+                            <div class="tab-text">
+                                <h3 data-i18n="features.goalSetting.title">目标设定与规划模块</h3>
+                                <p data-i18n="features.goalSetting.desc">构建你的人生蓝图，一步步实现自我价值</p>
+                                <ul class="feature-list">
+                                    <li data-i18n="features.goalSetting.list.item1">
+                                        <strong>个人目标设定：</strong>基于你的兴趣和价值观，制定短期和长期目标
+                                    </li>
+                                    <li data-i18n="features.goalSetting.list.item2">
+                                        <strong>行动计划制定：</strong>将大目标分解为可执行的小步骤，制定详细行动计划
+                                    </li>
+                                    <li data-i18n="features.goalSetting.list.item3">
+                                        <strong>进度跟踪与反馈：</strong>可视化目标完成进度，获得及时激励和调整建议
+                                    </li>
+                                </ul>
+                                <a href="#app-preview" class="btn btn-text" data-i18n="features.tryFeature">体验此功能 <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                            <div class="tab-image">
+                                <img src="img/feature-goal-setting.png" alt="目标设定功能展示">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tab-content" id="communication">
+                        <div class="tab-content-inner">
+                            <div class="tab-text">
+                                <h3 data-i18n="features.communication.title">沟通技巧提升模块</h3>
+                                <p data-i18n="features.communication.desc">学习表达自我，设立健康边界，改善与父母的关系</p>
+                                <ul class="feature-list">
+                                    <li data-i18n="features.communication.list.item1">
+                                        <strong>沟通课程：</strong>提供健康沟通的技巧和方法，学会表达感受和需求
+                                    </li>
+                                    <li data-i18n="features.communication.list.item2">
+                                        <strong>模拟对话练习：</strong>通过互动场景，练习如何与父母进行有效沟通
+                                    </li>
+                                    <li data-i18n="features.communication.list.item3">
+                                        <strong>案例分享：</strong>学习真实亲子沟通案例，获取实用经验和解决方案
+                                    </li>
+                                </ul>
+                                <a href="#app-preview" class="btn btn-text" data-i18n="features.tryFeature">体验此功能 <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                            <div class="tab-image">
+                                <img src="img/feature-communication.png" alt="沟通技巧功能展示">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tab-content" id="social-expansion">
+                        <div class="tab-content-inner">
+                            <div class="tab-text">
+                                <h3 data-i18n="features.socialExpansion.title">社交拓展模块</h3>
+                                <p data-i18n="features.socialExpansion.desc">打破社交孤岛，建立健康的人际关系网络</p>
+                                <ul class="feature-list">
+                                    <li data-i18n="features.socialExpansion.list.item1">
+                                        <strong>社交活动推荐：</strong>根据你的兴趣和位置，推荐适合的线上线下社交活动
+                                    </li>
+                                    <li data-i18n="features.socialExpansion.list.item2">
+                                        <strong>兴趣小组匹配：</strong>加入志同道合的兴趣小组，分享经验，建立连接
+                                    </li>
+                                    <li data-i18n="features.socialExpansion.list.item3">
+                                        <strong>社交技巧培训：</strong>学习实用的社交技能，提升自信，更好地与人相处
+                                    </li>
+                                </ul>
+                                <a href="#app-preview" class="btn btn-text" data-i18n="features.tryFeature">体验此功能 <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                            <div class="tab-image">
+                                <img src="img/feature-social-expansion.png" alt="社交拓展功能展示">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tab-content" id="learning-growth">
+                        <div class="tab-content-inner">
+                            <div class="tab-text">
+                                <h3 data-i18n="features.learningGrowth.title">学习与成长模块</h3>
+                                <p data-i18n="features.learningGrowth.desc">持续学习，不断进步，拓展人生可能性</p>
+                                <ul class="feature-list">
+                                    <li data-i18n="features.learningGrowth.list.item1">
+                                        <strong>在线课程资源：</strong>精选职业技能、兴趣培养、心理健康等各类优质课程
+                                    </li>
+                                    <li data-i18n="features.learningGrowth.list.item2">
+                                        <strong>学习计划制定：</strong>帮助你制定个性化的学习计划，提高学习效率
+                                    </li>
+                                    <li data-i18n="features.learningGrowth.list.item3">
+                                        <strong>学习进度跟踪：</strong>记录学习成果，提供反馈和评估，保持学习动力
+                                    </li>
+                                </ul>
+                                <a href="#app-preview" class="btn btn-text" data-i18n="features.tryFeature">体验此功能 <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                            <div class="tab-image">
+                                <img src="img/feature-learning-growth.png" alt="学习成长功能展示">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="benefits" id="benefits">
+        <div class="container">
+            <h2 data-i18n="benefits.title">使用"重塑人生"，你将收获</h2>
+            <div class="benefits-grid">
+                <div class="benefit">
+                    <div class="benefit-icon">
+                        <i class="fas fa-user-check"></i>
+                    </div>
+                    <h3 data-i18n="benefits.identity.title">清晰的自我认同</h3>
+                    <p data-i18n="benefits.identity.desc">了解真实的自己，建立独立的身份认同，不再活在父母的期望中</p>
+                </div>
+                <div class="benefit">
+                    <div class="benefit-icon">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <h3 data-i18n="benefits.confidence.title">提升的自信与自尊</h3>
+                    <p data-i18n="benefits.confidence.desc">认识并接纳自己的优点与不足，建立健康的自我评价，敢于面对挑战</p>
+                </div>
+                <div class="benefit">
+                    <div class="benefit-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3 data-i18n="benefits.boundaries.title">健康的个人边界</h3>
+                    <p data-i18n="benefits.boundaries.desc">学会设立并维护个人边界，不再过度迎合他人，保护自己的情感健康</p>
+                </div>
+                <div class="benefit">
+                    <div class="benefit-icon">
+                        <i class="fas fa-comment-dots"></i>
+                    </div>
+                    <h3 data-i18n="benefits.communication.title">改善的家庭关系</h3>
+                    <p data-i18n="benefits.communication.desc">掌握健康沟通技巧，与父母建立更平等、更理解的关系</p>
+                </div>
+                <div class="benefit">
+                    <div class="benefit-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3 data-i18n="benefits.social.title">丰富的社交生活</h3>
+                    <p data-i18n="benefits.social.desc">拓展社交圈，结交志同道合的朋友，建立健康的支持网络</p>
+                </div>
+                <div class="benefit">
+                    <div class="benefit-icon">
+                        <i class="fas fa-compass"></i>
+                    </div>
+                    <h3 data-i18n="benefits.direction.title">明确的人生方向</h3>
+                    <p data-i18n="benefits.direction.desc">找到符合自己价值观的目标，规划清晰的人生路径，充满前进动力</p>
+                </div>
+                <div class="benefit">
+                    <div class="benefit-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3 data-i18n="benefits.growth.title">持续的个人成长</h3>
+                    <p data-i18n="benefits.growth.desc">养成终身学习的习惯，不断拓展能力边界，实现自我价值</p>
+                </div>
+                <div class="benefit">
+                    <div class="benefit-icon">
+                        <i class="fas fa-smile-beam"></i>
+                    </div>
+                    <h3 data-i18n="benefits.happiness.title">更充实的幸福感</h3>
+                    <p data-i18n="benefits.happiness.desc">活出真实的自己，享受自主选择的生活，体验内在的满足与幸福</p>
+                </div>
+            </div>
+            <div class="benefits-cta">
+                <a href="#app-preview" class="btn btn-primary" data-i18n="benefits.cta">开始你的重塑之旅</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="how-it-works">
+        <div class="container">
+            <h2 data-i18n="howItWorks.title">如何开始你的重塑之旅</h2>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3 data-i18n="howItWorks.step1.title">下载安装</h3>
+                        <p data-i18n="howItWorks.step1.desc">从App Store或Google Play下载"重塑人生"应用，安装到你的设备上</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3 data-i18n="howItWorks.step2.title">完成评估</h3>
+                        <p data-i18n="howItWorks.step2.desc">完成初始评估问卷，帮助我们了解你的具体情况和需求</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3 data-i18n="howItWorks.step3.title">获取个性化计划</h3>
+                        <p data-i18n="howItWorks.step3.desc">基于你的评估结果，我们将为你定制个性化的成长计划</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3 data-i18n="howItWorks.step4.title">按计划行动</h3>
+                        <p data-i18n="howItWorks.step4.desc">每天投入15-30分钟，完成App中的练习和任务，逐步成长</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">5</div>
+                    <div class="step-content">
+                        <h3 data-i18n="howItWorks.step5.title">跟踪进度</h3>
+                        <p data-i18n="howItWorks.step5.desc">定期回顾你的进步，调整计划，庆祝每一个小成就</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="fifty-day-plan" id="fifty-day-plan">
+        <div class="container">
+            <h2 data-i18n="fiftyDayPlan.title">50天逐步重塑计划</h2>
+            <p class="section-subtitle" data-i18n="fiftyDayPlan.subtitle">科学设计的50天计划，每天只需15-30分钟，循序渐进地改变思维模式，建立健康的自我认知</p>
+            
+            <div class="plan-timeline">
+                <div class="timeline-phase">
+                    <div class="phase-marker">
+                        <span class="phase-number">1</span>
+                    </div>
+                    <div class="phase-content">
+                        <h3 data-i18n="fiftyDayPlan.phase1.title">认知觉醒期（第1-10天）</h3>
+                        <p data-i18n="fiftyDayPlan.phase1.desc">识别父母规训的影响，觉察自己的思维模式和情绪反应，开始建立自我意识</p>
+                        <ul class="phase-activities">
+                            <li data-i18n="fiftyDayPlan.phase1.activity1">每日冥想与自我觉察练习</li>
+                            <li data-i18n="fiftyDayPlan.phase1.activity2">情绪识别与记录</li>
+                            <li data-i18n="fiftyDayPlan.phase1.activity3">童年经历探索与反思</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="timeline-phase">
+                    <div class="phase-marker">
+                        <span class="phase-number">2</span>
+                    </div>
+                    <div class="phase-content">
+                        <h3 data-i18n="fiftyDayPlan.phase2.title">自我探索期（第11-20天）</h3>
+                        <p data-i18n="fiftyDayPlan.phase2.desc">深入了解自己的兴趣、价值观和天赋，开始建立独立的自我认同</p>
+                        <ul class="phase-activities">
+                            <li data-i18n="fiftyDayPlan.phase2.activity1">个性特质和优势分析</li>
+                            <li data-i18n="fiftyDayPlan.phase2.activity2">兴趣探索与实验</li>
+                            <li data-i18n="fiftyDayPlan.phase2.activity3">核心价值观确立</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="timeline-phase">
+                    <div class="phase-marker">
+                        <span class="phase-number">3</span>
+                    </div>
+                    <div class="phase-content">
+                        <h3 data-i18n="fiftyDayPlan.phase3.title">行为重塑期（第21-30天）</h3>
+                        <p data-i18n="fiftyDayPlan.phase3.desc">建立新的健康习惯，学习设立边界，改变不利于自我成长的行为模式</p>
+                        <ul class="phase-activities">
+                            <li data-i18n="fiftyDayPlan.phase3.activity1">边界设立与沟通练习</li>
+                            <li data-i18n="fiftyDayPlan.phase3.activity2">拒绝与表达训练</li>
+                            <li data-i18n="fiftyDayPlan.phase3.activity3">积极习惯养成</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="timeline-phase">
+                    <div class="phase-marker">
+                        <span class="phase-number">4</span>
+                    </div>
+                    <div class="phase-content">
+                        <h3 data-i18n="fiftyDayPlan.phase4.title">关系调整期（第31-40天）</h3>
+                        <p data-i18n="fiftyDayPlan.phase4.desc">重新审视和调整与父母及他人的关系，建立健康的互动模式</p>
+                        <ul class="phase-activities">
+                            <li data-i18n="fiftyDayPlan.phase4.activity1">父母关系模式分析</li>
+                            <li data-i18n="fiftyDayPlan.phase4.activity2">健康沟通实践</li>
+                            <li data-i18n="fiftyDayPlan.phase4.activity3">社交关系拓展</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="timeline-phase">
+                    <div class="phase-marker">
+                        <span class="phase-number">5</span>
+                    </div>
+                    <div class="phase-content">
+                        <h3 data-i18n="fiftyDayPlan.phase5.title">未来规划期（第41-50天）</h3>
+                        <p data-i18n="fiftyDayPlan.phase5.desc">基于真实的自我和价值观，规划人生方向，设定符合内心的目标</p>
+                        <ul class="phase-activities">
+                            <li data-i18n="fiftyDayPlan.phase5.activity1">人生愿景构建</li>
+                            <li data-i18n="fiftyDayPlan.phase5.activity2">目标设定与行动计划</li>
+                            <li data-i18n="fiftyDayPlan.phase5.activity3">长期成长策略制定</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="plan-cta">
+                <a href="#pricing" class="btn btn-primary" data-i18n="fiftyDayPlan.cta">开始50天重塑计划</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <h2 data-i18n="testimonials.title">用户们的重塑故事</h2>
+            <div class="testimonials-carousel">
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <div class="testimonial-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text" data-i18n="testimonials.testimonial1.text">"使用'重塑人生'三个月后，我终于有勇气和父母谈论我真正想学的专业。通过App学习的沟通技巧让我能够清晰表达自己的想法，而不是像以前一样回避冲突。现在我正在追求自己热爱的音乐事业，父母也开始尊重我的选择。"</p>
+                        <div class="testimonial-author">
+                            <img src="img/testimonial-1.jpg" alt="李明 照片">
+                            <div class="author-info">
+                                <h4 data-i18n="testimonials.testimonial1.name">李明，24岁</h4>
+                                <p data-i18n="testimonials.testimonial1.info">使用重塑人生 3个月</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <div class="testimonial-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text" data-i18n="testimonials.testimonial2.text">"从小到大，我总是按照父母的期望去做每一个决定，完全不知道自己喜欢什么。'重塑人生'的自我探索模块帮助我发现了对心理学的热爱。现在我不仅开始学习相关课程，还加入了兴趣小组，认识了许多志同道合的朋友。第一次感觉到我在为自己而活。"</p>
+                        <div class="testimonial-author">
+                            <img src="img/testimonial-2.jpg" alt="张婷 照片">
+                            <div class="author-info">
+                                <h4 data-i18n="testimonials.testimonial2.name">张婷，28岁</h4>
+                                <p data-i18n="testimonials.testimonial2.info">使用重塑人生 6个月</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <div class="testimonial-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <p class="testimonial-text" data-i18n="testimonials.testimonial3.text">"我曾经非常害怕与人交往，总觉得自己不够好。App里的正念练习和自我肯定训练帮助我慢慢建立了自信。通过社交拓展模块，我参加了几次小型活动，现在已经能够自然地与人交流，甚至交到了几个好朋友。感谢'重塑人生'给了我勇气去尝试新事物。"</p>
+                        <div class="testimonial-author">
+                            <img src="img/testimonial-3.jpg" alt="王强 照片">
+                            <div class="author-info">
+                                <h4 data-i18n="testimonials.testimonial3.name">王强，31岁</h4>
+                                <p data-i18n="testimonials.testimonial3.info">使用重塑人生 4个月</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonials-nav">
+                <button class="testimonial-prev"><i class="fas fa-chevron-left"></i></button>
+                <div class="testimonial-dots">
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+                <button class="testimonial-next"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <section class="app-preview" id="app-preview">
+        <div class="container">
+            <h2 data-i18n="appPreview.title">不同风格的App原型预览</h2>
+            <p class="section-subtitle" data-i18n="appPreview.subtitle">探索我们为不同用户打造的多种界面风格，找到适合你的体验</p>
+            
+            <div class="app-styles-tabs">
+                <div class="app-styles-nav">
+                    <button class="style-btn active" data-style="eastern-style">
+                        <i class="fas fa-yin-yang"></i>
+                        <span data-i18n="appPreview.styles.eastern">东方风格</span>
+                    </button>
+                    <button class="style-btn" data-style="magic-style">
+                        <i class="fas fa-hat-wizard"></i>
+                        <span data-i18n="appPreview.styles.magic">魔法风格</span>
+                    </button>
+                    <button class="style-btn" data-style="tech-style">
+                        <i class="fas fa-microchip"></i>
+                        <span data-i18n="appPreview.styles.tech">科技风格</span>
+                    </button>
+                    <button class="style-btn" data-style="onboarding">
+                        <i class="fas fa-tasks"></i>
+                        <span data-i18n="appPreview.styles.onboarding">引导流程</span>
+                    </button>
+                    <button class="style-btn" data-style="paywall">
+                        <i class="fas fa-lock"></i>
+                        <span data-i18n="appPreview.styles.paywall">订阅界面</span>
+                    </button>
+                </div>
+                
+                <div class="app-styles-content">
+                    <div class="style-content active" id="eastern-style">
+                        <div class="style-description">
+                            <h3 data-i18n="appPreview.easternStyle.title">东方禅意风格</h3>
+                            <p data-i18n="appPreview.easternStyle.desc">融合传统东方美学与现代设计，营造宁静、平和的氛围，帮助用户沉淀心灵，寻找内在平衡。适合喜欢冥想、自我反思的用户。</p>
+                            <ul class="style-features">
+                                <li data-i18n="appPreview.easternStyle.feature1">水墨画风的视觉元素与渐变色调</li>
+                                <li data-i18n="appPreview.easternStyle.feature2">禅意十足的界面交互体验</li>
+                                <li data-i18n="appPreview.easternStyle.feature3">传统哲学智慧融入功能设计</li>
+                            </ul>
+                        </div>
+                        <div class="app-preview-frame">
+                            <iframe src="apps/eastern-style/index.html" frameborder="0" title="东方风格App预览"></iframe>
+                        </div>
+                    </div>
+                    
+                    <div class="style-content" id="magic-style">
+                        <div class="style-description">
+                            <h3 data-i18n="appPreview.magicStyle.title">魔法奇幻风格</h3>
+                            <p data-i18n="appPreview.magicStyle.desc">将自我成长之旅融入魔法世界观，通过奇幻元素激发用户的好奇心与创造力，使成长过程更加有趣。适合想要增添乐趣的用户。</p>
+                            <ul class="style-features">
+                                <li data-i18n="appPreview.magicStyle.feature1">富有魔法感的界面与动画效果</li>
+                                <li data-i18n="appPreview.magicStyle.feature2">将成长任务设计为魔法冒险</li>
+                                <li data-i18n="appPreview.magicStyle.feature3">成就系统如同魔法能力升级</li>
+                            </ul>
+                        </div>
+                        <div class="app-preview-frame">
+                            <iframe src="apps/magic-style/index.html" frameborder="0" title="魔法风格App预览"></iframe>
+                        </div>
+                    </div>
+                    
+                    <div class="style-content" id="tech-style">
+                        <div class="style-description">
+                            <h3 data-i18n="appPreview.techStyle.title">现代科技风格</h3>
+                            <p data-i18n="appPreview.techStyle.desc">采用简洁、现代的科技美学，提供清晰直观的数据可视化和工具流程，注重效率与实用性。适合理性思维和结果导向的用户。</p>
+                            <ul class="style-features">
+                                <li data-i18n="appPreview.techStyle.feature1">简约现代的界面设计与色彩搭配</li>
+                                <li data-i18n="appPreview.techStyle.feature2">数据驱动的进度追踪与可视化</li>
+                                <li data-i18n="appPreview.techStyle.feature3">高效便捷的工具集与快速操作</li>
+                            </ul>
+                        </div>
+                        <div class="app-preview-frame">
+                            <iframe src="apps/tech-style/index.html" frameborder="0" title="科技风格App预览"></iframe>
+                        </div>
+                    </div>
+                    
+                    <div class="style-content" id="onboarding">
+                        <div class="style-description">
+                            <h3 data-i18n="appPreview.onboarding.title">引导流程预览</h3>
+                            <p data-i18n="appPreview.onboarding.desc">精心设计的新用户引导流程，通过简洁明了的步骤，帮助用户快速了解App的核心功能和价值，提升首次使用体验。</p>
+                            <ul class="style-features">
+                                <li data-i18n="appPreview.onboarding.feature1">直观易懂的使用引导与提示</li>
+                                <li data-i18n="appPreview.onboarding.feature2">个性化初始评估与计划定制</li>
+                                <li data-i18n="appPreview.onboarding.feature3">渐进式功能介绍不造成压力</li>
+                            </ul>
+                        </div>
+                        <div class="app-preview-frame">
+                            <iframe src="apps/onboarding-preview/index.html" frameborder="0" title="引导流程预览"></iframe>
+                        </div>
+                    </div>
+                    
+                    <div class="style-content" id="paywall">
+                        <div class="style-description">
+                            <h3 data-i18n="appPreview.paywall.title">订阅界面预览</h3>
+                            <p data-i18n="appPreview.paywall.desc">清晰展示订阅方案与价值，帮助用户轻松做出决策。我们注重透明度与价值传达，确保用户了解所获得的全部权益。</p>
+                            <ul class="style-features">
+                                <li data-i18n="appPreview.paywall.feature1">透明清晰的价格与权益对比</li>
+                                <li data-i18n="appPreview.paywall.feature2">灵活多样的订阅周期选择</li>
+                                <li data-i18n="appPreview.paywall.feature3">安全可靠的支付流程保障</li>
+                            </ul>
+                        </div>
+                        <div class="app-preview-frame">
+                            <iframe src="apps/paywall-preview/index.html" frameborder="0" title="订阅界面预览"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="full-demo-cta">
+                <a href="apps/base/app/home.html" class="btn btn-primary" data-i18n="appPreview.fullDemo">体验完整App演示</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="pricing" id="pricing">
+        <div class="container">
+            <h2 data-i18n="pricing.title">选择适合你的方案</h2>
+            <p class="section-subtitle" data-i18n="pricing.subtitle">灵活的订阅选项，满足不同阶段的需求</p>
+            
+            <div class="pricing-cards">
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3 data-i18n="pricing.basic.title">基础版</h3>
+                        <div class="pricing-price">
+                            <span class="price" data-i18n="pricing.basic.price">免费</span>
+                        </div>
+                    </div>
+                    <div class="pricing-features">
+                        <ul>
+                            <li data-i18n="pricing.basic.feature1">自我探索基础测试</li>
+                            <li data-i18n="pricing.basic.feature2">每日1次正念练习</li>
+                            <li data-i18n="pricing.basic.feature3">基础目标设定工具</li>
+                            <li data-i18n="pricing.basic.feature4">社区内容有限访问</li>
+                            <li data-i18n="pricing.basic.feature5">有广告</li>
+                        </ul>
+                    </div>
+                    <div class="pricing-cta">
+                        <a href="#download" class="btn btn-secondary" data-i18n="pricing.basic.cta">免费开始</a>
+                    </div>
+                </div>
+                
+                <div class="pricing-card popular">
+                    <div class="popular-tag" data-i18n="pricing.popularTag">最受欢迎</div>
+                    <div class="pricing-header">
+                        <h3 data-i18n="pricing.premium.title">高级版</h3>
+                        <div class="pricing-price">
+                            <span class="price">¥39</span>
+                            <span class="period" data-i18n="pricing.premium.period">/ 月</span>
+                        </div>
+                        <div class="pricing-save" data-i18n="pricing.premium.save">年付省25%</div>
+                    </div>
+                    <div class="pricing-features">
+                        <ul>
+                            <li data-i18n="pricing.premium.feature1">所有基础版功能</li>
+                            <li data-i18n="pricing.premium.feature2">完整50天重塑计划</li>
+                            <li data-i18n="pricing.premium.feature3">无限正念练习与引导</li>
+                            <li data-i18n="pricing.premium.feature4">高级目标规划与跟踪</li>
+                            <li data-i18n="pricing.premium.feature5">完整沟通课程与练习</li>
+                            <li data-i18n="pricing.premium.feature6">社交活动推荐与匹配</li>
+                            <li data-i18n="pricing.premium.feature7">精选学习资源库</li>
+                            <li data-i18n="pricing.premium.feature8">无广告体验</li>
+                        </ul>
+                    </div>
+                    <div class="pricing-cta">
+                        <a href="#download" class="btn btn-primary" data-i18n="pricing.premium.cta">立即订阅</a>
+                    </div>
+                </div>
+                
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3 data-i18n="pricing.coach.title">教练版</h3>
+                        <div class="pricing-price">
+                            <span class="price">¥99</span>
+                            <span class="period" data-i18n="pricing.coach.period">/ 月</span>
+                        </div>
+                    </div>
+                    <div class="pricing-features">
+                        <ul>
+                            <li data-i18n="pricing.coach.feature1">所有高级版功能</li>
+                            <li data-i18n="pricing.coach.feature2">专业教练1对1指导</li>
+                            <li data-i18n="pricing.coach.feature3">每月2次视频咨询</li>
+                            <li data-i18n="pricing.coach.feature4">个性化成长计划定制</li>
+                            <li data-i18n="pricing.coach.feature5">持续反馈与调整</li>
+                            <li data-i18n="pricing.coach.feature6">优先客户支持</li>
+                        </ul>
+                    </div>
+                    <div class="pricing-cta">
+                        <a href="#download" class="btn btn-secondary" data-i18n="pricing.coach.cta">升级教练版</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="pricing-guarantee">
+                <div class="guarantee-icon">
+                    <i class="fas fa-shield-alt"></i>
+                </div>
+                <div class="guarantee-text">
+                    <h4 data-i18n="pricing.guarantee.title">7天无条件退款保证</h4>
+                    <p data-i18n="pricing.guarantee.desc">如果你对订阅服务不满意，可在7天内申请全额退款，无需任何理由</p>
+                </div>
+            </div>
+            
+            <div class="pricing-faq">
+                <h3 data-i18n="pricing.faq.title">常见问题</h3>
+                <div class="faq-items">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h4 data-i18n="pricing.faq.q1">订阅可以随时取消吗？</h4>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p data-i18n="pricing.faq.a1">是的，你可以随时在账户设置中取消订阅。取消后，你仍然可以使用已付费的服务直到当前订阅周期结束。</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h4 data-i18n="pricing.faq.q2">能否在不同设备上使用同一账号？</h4>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p data-i18n="pricing.faq.a2">可以。一个账号可以在多台设备上同时登录，你的数据会自动同步，确保无缝体验。</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h4 data-i18n="pricing.faq.q3">教练是如何匹配的？</h4>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p data-i18n="pricing.faq.a3">我们会根据你的需求、目标和偏好，从我们经过严格筛选的专业教练团队中，为你匹配最合适的教练。你可以在初次会话后申请更换，直到找到适合你的教练。</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h4 data-i18n="pricing.faq.q4">我的个人数据安全吗？</h4>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p data-i18n="pricing.faq.a4">我们非常重视用户隐私。所有个人数据均采用行业标准加密技术保护，绝不会未经许可分享给第三方。你可以随时查看、导出或删除你的数据。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="download" id="download">
+        <div class="container">
+            <div class="download-content">
+                <h2 data-i18n="download.title">立即下载，开启自我重塑之旅</h2>
+                <p data-i18n="download.subtitle">现在就采取行动，迈出改变的第一步</p>
+                <div class="app-stores">
+                    <a href="#" class="app-store-btn">
+                        <img src="img/app-store-badge.png" alt="从App Store下载">
+                    </a>
+                    <a href="#" class="app-store-btn">
+                        <img src="img/google-play-badge.png" alt="从Google Play下载">
+                    </a>
+                </div>
+                <div class="download-qr">
+                    <img src="img/download-qr.png" alt="扫码下载">
+                    <p data-i18n="download.qrCode">扫描二维码下载</p>
+                </div>
+            </div>
+            <div class="download-image">
+                <img src="img/download-mockup.png" alt="重塑人生 App 展示">
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-logo">
+                    <img src="img/logo.svg" alt="重塑人生 Logo">
+                    <span>重塑人生</span>
+                </div>
+                <div class="footer-social">
+                    <a href="#" class="social-link"><i class="fab fa-weixin"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-weibo"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-nav">
+                <div class="footer-nav-column">
+                    <h4 data-i18n="footer.app">应用</h4>
+                    <ul>
+                        <li><a href="#features" data-i18n="footer.features">功能介绍</a></li>
+                        <li><a href="#benefits" data-i18n="footer.benefits">用户收益</a></li>
+                        <li><a href="#app-preview" data-i18n="footer.preview">App 预览</a></li>
+                        <li><a href="#pricing" data-i18n="footer.pricing">订阅方案</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-nav-column">
+                    <h4 data-i18n="footer.resources">资源</h4>
+                    <ul>
+                        <li><a href="#" data-i18n="footer.blog">博客</a></li>
+                        <li><a href="#" data-i18n="footer.guides">指南</a></li>
+                        <li><a href="#" data-i18n="footer.events">活动</a></li>
+                        <li><a href="#" data-i18n="footer.community">社区</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-nav-column">
+                    <h4 data-i18n="footer.company">公司</h4>
+                    <ul>
+                        <li><a href="#" data-i18n="footer.about">关于我们</a></li>
+                        <li><a href="#" data-i18n="footer.careers">加入我们</a></li>
+                        <li><a href="#" data-i18n="footer.press">媒体报道</a></li>
+                        <li><a href="#" data-i18n="footer.contact">联系我们</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-nav-column">
+                    <h4 data-i18n="footer.legal">法律</h4>
+                    <ul>
+                        <li><a href="#" data-i18n="footer.terms">使用条款</a></li>
+                        <li><a href="#" data-i18n="footer.privacy">隐私政策</a></li>
+                        <li><a href="#" data-i18n="footer.security">安全声明</a></li>
+                        <li><a href="#" data-i18n="footer.cookies">Cookie 政策</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p class="copyright" data-i18n="footer.copyright"> 2023 重塑人生. 保留所有权利.</p>
+                <div class="footer-language">
+                    <button class="footer-lang-btn active" data-lang="zh">中文</button>
+                    <span>|</span>
+                    <button class="footer-lang-btn" data-lang="en">English</button>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/i18n.js"></script>
+    <script src="js/main.js"></script>
+</body>
 </html>

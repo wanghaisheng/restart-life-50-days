@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>重塑人生 - 订阅界面预览</title>
+    <style>
+        /* 重置样式 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+        }
+        
+        :root {
+            /* 颜色方案 */
+            --primary-color: #6a5acd; /* 紫蓝色：代表心灵成长和内在平衡 */
+            --primary-light: #9d91e3;
+            --primary-dark: #483d8b;
+            --secondary-color: #5fc9c2; /* 青绿色：代表新生和更新 */
+            --secondary-light: #8ee9e2;
+            --secondary-dark: #3a867f;
+            --gradient-bg: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            --dark: #333333;
+            --medium-dark: #555555;
+            --medium: #777777;
+            --light: #f5f7fa;
+            --lighter: #fafafa;
+            --white: #ffffff;
+            
+            /* 边框圆角 */
+            --border-radius-sm: 8px;
+            --border-radius-md: 16px;
+            --border-radius-lg: 24px;
+            
+            /* 阴影 */
+            --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.15);
+            
+            /* 过渡 */
+            --transition-fast: 0.2s ease;
+            --transition-normal: 0.3s ease;
+            
+            /* 间距 */
+            --spacing-xs: 4px;
+            --spacing-sm: 8px;
+            --spacing-md: 16px;
+            --spacing-lg: 24px;
+            --spacing-xl: 32px;
+        }
+        
+        body {
+            background-color: var(--light);
+            color: var(--dark);
+            font-size: 16px;
+            line-height: 1.6;
+        }
+        
+        /* 模拟iPhone 15 Pro设备尺寸 */
+        .device-frame {
+            width: 100%;
+            height: 812px;
+            overflow: hidden;
+            position: relative;
+            background-color: var(--white);
+        }
+        
+        /* 状态栏 */
+        .status-bar {
+            height: 44px;
+            background-color: var(--white);
+            padding: 10px 16px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .status-bar-time {
+            font-weight: 600;
+            font-size: 14px;
+            color: var(--dark);
+        }
+        
+        .status-bar-icons {
+            display: flex;
+            align-items: center;
+        }
+        
+        .status-bar-icons > div {
+            margin-left: 4px;
+        }
+        
+        /* 订阅界面内容 */
+        .paywall-container {
+            height: calc(100% - 44px);
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+        
+        /* 顶部导航 */
+        .paywall-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: var(--spacing-md) var(--spacing-md);
+        }
+        
+        .close-btn {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background-color: var(--light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: none;
+            cursor: pointer;
+            transition: background-color var(--transition-fast);
+        }
+        
+        .close-btn:hover {
+            background-color: #e0e0e0;
+        }
+        
+        /* 标题部分 */
+        .paywall-header {
+            text-align: center;
+            padding: var(--spacing-md) var(--spacing-lg) var(--spacing-xl);
+        }
+        
+        .paywall-title {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: var(--spacing-sm);
+            background: var(--gradient-bg);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        .paywall-subtitle {
+            font-size: 16px;
+            color: var(--medium-dark);
+            margin-bottom: var(--spacing-lg);
+            padding: 0 var(--spacing-lg);
+        }
+        
+        /* 特性列表 */
+        .feature-list {
+            padding: 0 var(--spacing-lg);
+            margin-bottom: var(--spacing-lg);
+        }
+        
+        .feature-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: var(--spacing-md);
+        }
+        
+        .feature-icon {
+            width: 24px;
+            height: 24px;
+            margin-right: var(--spacing-md);
+            flex-shrink: 0;
+            color: var(--primary-color);
+        }
+        
+        .feature-text {
+            font-size: 15px;
+            color: var(--medium-dark);
+        }
+        
+        /* 订阅方案选择器 */
+        .subscription-selector {
+            padding: 0 var(--spacing-lg);
+            margin-bottom: var(--spacing-xl);
+        }
+        
+        .subscription-options {
+            display: flex;
+            background-color: var(--light);
+            border-radius: var(--border-radius-md);
+            padding: var(--spacing-xs);
+            margin-bottom: var(--spacing-lg);
+            position: relative;
+            box-shadow: var(--shadow-sm);
+        }
+        
+        .option-tab {
+            flex: 1;
+            text-align: center;
+            padding: var(--spacing-md) var(--spacing-sm);
+            cursor: pointer;
+            position: relative;
+            z-index: 1;
+            transition: color var(--transition-normal);
+            font-weight: 500;
+        }
+        
+        .option-tab.active {
+            color: var(--primary-color);
+        }
+        
+        .option-slider {
+            position: absolute;
+            top: var(--spacing-xs);
+            left: var(--spacing-xs);
+            width: calc(50% - var(--spacing-xs));
+            height: calc(100% - var(--spacing-xs) * 2);
+            background-color: var(--white);
+            border-radius: calc(var(--border-radius-md) - var(--spacing-xs));
+            transition: transform var(--transition-normal);
+            box-shadow: var(--shadow-sm);
+        }
+        
+        .option-slider.annual {
+            transform: translateX(100%);
+        }
+        
+        /* 价格卡片 */
+        .price-cards {
+            display: flex;
+            flex-direction: column;
+            gap: var(--spacing-md);
+            margin-bottom: var(--spacing-lg);
+        }
+        
+        .price-card {
+            background-color: var(--white);
+            border-radius: var(--border-radius-md);
+            padding: var(--spacing-lg);
+            border: 1px solid #eeeeee;
+            transition: all var(--transition-normal);
+            box-shadow: var(--shadow-sm);
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .price-card.selected {
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 2px var(--primary-color);
+        }
+        
+        .price-card:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .price-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: var(--spacing-md);
+        }
+        
+        .price-plan {
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--dark);
+        }
+        
+        .price-radio {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            border: 2px solid var(--medium);
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .price-card.selected .price-radio {
+            border-color: var(--primary-color);
+        }
+        
+        .price-radio::after {
+            content: '';
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: var(--primary-color);
+            opacity: 0;
+            transition: opacity var(--transition-fast);
+        }
+        
+        .price-card.selected .price-radio::after {
+            opacity: 1;
+        }
+        
+        .popular-tag {
+            position: absolute;
+            top: 10px;
+            right: -30px;
+            background-color: var(--primary-color);
+            color: white;
+            font-size: 12px;
+            font-weight: 500;
+            padding: 4px 30px;
+            transform: rotate(45deg);
+        }
+        
+        .price-amount {
+            display: flex;
+            align-items: baseline;
+            margin-bottom: var(--spacing-xs);
+        }
+        
+        .price-currency {
+            font-size: 16px;
+            color: var(--dark);
+            margin-right: 2px;
+        }
+        
+        .price-number {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--dark);
+        }
+        
+        .price-period {
+            font-size: 14px;
+            color: var(--medium);
+            margin-left: 2px;
+        }
+        
+        .price-per-month {
+            font-size: 14px;
+            color: var(--medium);
+            margin-bottom: var(--spacing-md);
+        }
+        
+        .price-save {
+            font-size: 14px;
+            color: #2ecc71;
+            font-weight: 500;
+        }
+        
+        /* 订阅按钮 */
+        .subscribe-button {
+            background: var(--gradient-bg);
+            border: none;
+            width: 100%;
+            padding: var(--spacing-md);
+            color: white;
+            font-size: 18px;
+            font-weight: 600;
+            border-radius: var(--border-radius-md);
+            cursor: pointer;
+            transition: all var(--transition-normal);
+            box-shadow: 0 4px 12px rgba(106, 90, 205, 0.3);
+            position: relative;
+            overflow: hidden;
+            margin-bottom: var(--spacing-md);
+        }
+        
+        .subscribe-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(106, 90, 205, 0.4);
+        }
+        
+        .subscribe-button::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.2);
+            transform: skewX(-15deg);
+            transition: all 0.5s ease;
+        }
+        
+        .subscribe-button:hover::after {
+            left: 100%;
+        }
+        
+        /* 退款政策与条款 */
+        .subscription-footer {
+            text-align: center;
+            padding: 0 var(--spacing-lg);
+            margin-top: auto;
+            margin-bottom: var(--spacing-xl);
+        }
+        
+        .refund-policy {
+            font-size: 14px;
+            color: var(--medium);
+            margin-bottom: var(--spacing-md);
+        }
+        
+        .terms-privacy {
+            font-size: 13px;
+            color: var(--medium);
+            padding: 0 var(--spacing-lg);
+        }
+        
+        .terms-privacy a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+        
+        .terms-privacy a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="device-frame">
+        <!-- 状态栏 -->
+        <div class="status-bar">
+            <div class="status-bar-time">14:30</div>
+            <div class="status-bar-icons">
+                <div class="signal-icon">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4 18L10 18" stroke="#333" stroke-width="2" stroke-linecap="round"/>
+                        <path d="M4 14L14 14" stroke="#333" stroke-width="2" stroke-linecap="round"/>
+                        <path d="M4 10L18 10" stroke="#333" stroke-width="2" stroke-linecap="round"/>
+                        <path d="M4 6L22 6" stroke="#333" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                </div>
+                <div class="wifi-icon">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 19.5L12 19.5" stroke="#333" stroke-width="2" stroke-linecap="round"/>
+                        <path d="M8.5 16C9.88 14.7 13.12 14.7 14.5 16" stroke="#333" stroke-width="2" stroke-linecap="round"/>
+                        <path d="M5 12.5C8 9.5 16 9.5 19 12.5" stroke="#333" stroke-width="2" stroke-linecap="round"/>
+                        <path d="M1.5 9C6.5 4 17.5 4 22.5 9" stroke="#333" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                </div>
+                <div class="battery-icon">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="2" y="7" width="18" height="10" rx="2" stroke="#333" stroke-width="2"/>
+                        <path d="M21 11H22C22.5523 11 23 11.4477 23 12V12C23 12.5523 22.5523 13 22 13H21V11Z" fill="#333"/>
+                        <rect x="5" y="10" width="11" height="4" fill="#333"/>
+                    </svg>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 订阅界面内容 -->
+        <div class="paywall-container">
+            <div class="paywall-nav">
+                <button class="close-btn">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M18 6L6 18" stroke="#333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M6 6L18 18" stroke="#333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+            </div>
+            
+            <div class="paywall-header">
+                <h1 class="paywall-title">解锁50天重塑计划</h1>
+                <p class="paywall-subtitle">订阅高级版，开启自我成长的全部可能性</p>
+            </div>
+            
+            <div class="feature-list">
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9 12L11 14L15 10M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <div class="feature-text">完整的50天重塑计划，包含所有练习、课程和工具</div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9 12L11 14L15 10M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <div class="feature-text">无限正念练习与引导，提升专注力与情绪管理能力</div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9 12L11 14L15 10M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <div class="feature-text">高级目标规划与跟踪，让你的成长更有方向</div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9 12L11 14L15 10M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <div class="feature-text">完整沟通课程与练习，改善人际关系与沟通技巧</div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9 12L11 14L15 10M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <div class="feature-text">无广告体验，专注于你的成长旅程</div>
+                </div>
+            </div>
+            
+            <div class="subscription-selector">
+                <div class="subscription-options">
+                    <div class="option-tab active" id="monthly-tab" onclick="switchPlan('monthly')">月付</div>
+                    <div class="option-tab" id="annual-tab" onclick="switchPlan('annual')">年付</div>
+                    <div class="option-slider"></div>
+                </div>
+                
+                <div class="price-cards">
+                    <div class="price-card" id="premium-card" onclick="selectPlan('premium')">
+                        <div class="price-header">
+                            <span class="price-plan">高级版</span>
+                            <div class="price-radio"></div>
+                        </div>
+                        <div class="price-amount">
+                            <span class="price-currency">¥</span>
+                            <span class="price-number">39</span>
+                            <span class="price-period">/月</span>
+                        </div>
+                        <div class="price-per-month" id="premium-per-month">每月 ¥39</div>
+                    </div>
+                    
+                    <div class="price-card selected" id="coach-card" onclick="selectPlan('coach')">
+                        <div class="popular-tag">最受欢迎</div>
+                        <div class="price-header">
+                            <span class="price-plan">教练版</span>
+                            <div class="price-radio"></div>
+                        </div>
+                        <div class="price-amount">
+                            <span class="price-currency">¥</span>
+                            <span class="price-number">99</span>
+                            <span class="price-period">/月</span>
+                        </div>
+                        <div class="price-per-month" id="coach-per-month">每月 ¥99</div>
+                        <div class="price-save" id="coach-save">年付可节省 ¥238</div>
+                    </div>
+                </div>
+                
+                <button class="subscribe-button">立即订阅</button>
+            </div>
+            
+            <div class="subscription-footer">
+                <div class="refund-policy">7天无条件退款保证</div>
+                <div class="terms-privacy">
+                    订阅即表示您同意我们的<a href="#">服务条款</a>和<a href="#">隐私政策</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // 切换月付/年付计划
+        function switchPlan(plan) {
+            const monthlyTab = document.getElementById('monthly-tab');
+            const annualTab = document.getElementById('annual-tab');
+            const optionSlider = document.querySelector('.option-slider');
+            
+            if (plan === 'monthly') {
+                monthlyTab.classList.add('active');
+                annualTab.classList.remove('active');
+                optionSlider.classList.remove('annual');
+                
+                // 更新价格显示
+                document.getElementById('premium-per-month').textContent = '每月 ¥39';
+                document.getElementById('coach-per-month').textContent = '每月 ¥99';
+                document.getElementById('coach-save').style.display = 'none';
+                
+            } else {
+                monthlyTab.classList.remove('active');
+                annualTab.classList.add('active');
+                optionSlider.classList.add('annual');
+                
+                // 更新价格显示（年付有优惠）
+                document.getElementById('premium-per-month').textContent = '每月 ¥29（年付）';
+                document.getElementById('coach-per-month').textContent = '每月 ¥79（年付）';
+                document.getElementById('coach-save').style.display = 'block';
+                document.getElementById('coach-save').textContent = '年付可节省 ¥238';
+            }
+        }
+        
+        // 选择订阅计划
+        function selectPlan(plan) {
+            const premiumCard = document.getElementById('premium-card');
+            const coachCard = document.getElementById('coach-card');
+            
+            if (plan === 'premium') {
+                premiumCard.classList.add('selected');
+                coachCard.classList.remove('selected');
+            } else {
+                premiumCard.classList.remove('selected');
+                coachCard.classList.add('selected');
+            }
+        }
+    </script>
+</body>
+</html>

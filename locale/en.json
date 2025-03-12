@@ -1,0 +1,356 @@
+{
+  "hero": {
+    "title": "50-Day <span class=\"highlight\">Parental Conditioning</span> Reversal Plan,<br>Start your <span class=\"highlight\">self-transformation</span> journey",
+    "subtitle": "Designed for those who have experienced parental control and suppression, leading to lack of self-exploration and self-love. Our 50-day systematic plan helps you rebuild confidence, self-esteem, and identity.",
+    "cta": {
+      "tryNow": "Try Now",
+      "learnMore": "Learn More"
+    },
+    "stats": {
+      "users": "Active Users",
+      "rating": "App Store Rating",
+      "improvement": "Report Significant Confidence Boost"
+    }
+  },
+  "painPoints": {
+    "title": "Are You Experiencing These Challenges?",
+    "identity": {
+      "title": "Lack of Identity",
+      "desc": "Living according to parental expectations, unclear about your true desires, struggling to establish your own identity"
+    },
+    "confidence": {
+      "title": "Insufficient Confidence",
+      "desc": "Excessive criticism makes it difficult to believe in your abilities, fear of failure, reluctance to try new things"
+    },
+    "boundaries": {
+      "title": "Blurred Boundaries",
+      "desc": "Difficulty saying \"no\" to parents, overly concerned with others' opinions, sacrificing your needs to please others"
+    },
+    "communication": {
+      "title": "Communication Struggles",
+      "desc": "Feeling anxious when communicating with parents, unable to express true thoughts, prone to conflict or avoidance"
+    },
+    "social": {
+      "title": "Limited Social Circle",
+      "desc": "Lack of social confidence, few friends, difficulty building intimate relationships, prone to loneliness"
+    },
+    "direction": {
+      "title": "Lost Direction",
+      "desc": "Unclear about interests, values, and goals, feeling confused about the future, lacking motivation to move forward"
+    }
+  },
+  "features": {
+    "title": "Six Core Modules for Complete Self-Transformation",
+    "subtitle": "The perfect combination of professional psychological tools and practical skills to help you gradually regain confidence and autonomy",
+    "tabs": {
+      "selfDiscovery": "Self-Discovery",
+      "selfCare": "Self-Care",
+      "goalSetting": "Goal Setting",
+      "communication": "Communication",
+      "socialExpansion": "Social Expansion",
+      "learningGrowth": "Learning & Growth"
+    },
+    "selfDiscovery": {
+      "title": "Self-Discovery Module",
+      "desc": "Rediscover your authentic self through professional tests and guided exercises",
+      "list": {
+        "item1": "<strong>Personality Tests:</strong> Based on professional psychological theories to help you understand your personality traits, strengths, and weaknesses",
+        "item2": "<strong>Interest Exploration:</strong> Through interactive questions and activities, guide you to discover neglected interests and hobbies",
+        "item3": "<strong>Values Assessment:</strong> Clarify the life principles and beliefs you truly value, providing internal guidance for decision-making"
+      }
+    },
+    "selfCare": {
+      "title": "Self-Care Module",
+      "desc": "Learn to accept and care for yourself, establishing a healthy relationship with yourself",
+      "list": {
+        "item1": "<strong>Mindfulness Practice:</strong> Through guided meditation, help you focus on the present, accept emotions, and relieve stress and anxiety",
+        "item2": "<strong>Self-Affirmation Exercises:</strong> Daily positive self-suggestions to help rebuild a positive self-image",
+        "item3": "<strong>Emotion Tracking:</strong> Track emotional changes, identify triggers, and learn to better manage emotions"
+      }
+    },
+    "goalSetting": {
+      "title": "Goal Setting & Planning Module",
+      "desc": "Build your life blueprint and realize self-value step by step",
+      "list": {
+        "item1": "<strong>Personal Goal Setting:</strong> Based on your interests and values, set short-term and long-term goals",
+        "item2": "<strong>Action Plan Development:</strong> Break down big goals into executable small steps and develop detailed action plans",
+        "item3": "<strong>Progress Tracking & Feedback:</strong> Visualize goal completion progress, receive timely encouragement and adjustment suggestions"
+      }
+    },
+    "communication": {
+      "title": "Communication Skills Enhancement Module",
+      "desc": "Learn to express yourself, establish healthy boundaries, and improve relationships with parents",
+      "list": {
+        "item1": "<strong>Communication Courses:</strong> Provide techniques and methods for healthy communication, learn to express feelings and needs",
+        "item2": "<strong>Simulated Dialogue Practice:</strong> Through interactive scenarios, practice how to communicate effectively with parents",
+        "item3": "<strong>Case Sharing:</strong> Learn from real parent-child communication cases, gain practical experience and solutions"
+      }
+    },
+    "socialExpansion": {
+      "title": "Social Expansion Module",
+      "desc": "Break social isolation and build a healthy network of relationships",
+      "list": {
+        "item1": "<strong>Social Activity Recommendations:</strong> Based on your interests and location, recommend suitable online and offline social activities",
+        "item2": "<strong>Interest Group Matching:</strong> Join like-minded interest groups, share experiences, and build connections",
+        "item3": "<strong>Social Skills Training:</strong> Learn practical social skills, boost confidence, and better interact with others"
+      }
+    },
+    "learningGrowth": {
+      "title": "Learning & Growth Module",
+      "desc": "Continuous learning, constant progress, expanding life possibilities",
+      "list": {
+        "item1": "<strong>Online Course Resources:</strong> Curated quality courses in career skills, interest cultivation, mental health, and more",
+        "item2": "<strong>Learning Plan Development:</strong> Help you create personalized learning plans to improve learning efficiency",
+        "item3": "<strong>Learning Progress Tracking:</strong> Record learning outcomes, provide feedback and evaluation, maintain learning motivation"
+      }
+    },
+    "tryFeature": "Try this feature <i class=\"fas fa-arrow-right\"></i>"
+  },
+  "benefits": {
+    "title": "What You'll Gain Using \"Life Transformation\"",
+    "identity": {
+      "title": "Clear Self-Identity",
+      "desc": "Understand your authentic self, establish independent identity, no longer living to meet parental expectations"
+    },
+    "confidence": {
+      "title": "Enhanced Confidence",
+      "desc": "Recognize and accept your strengths and weaknesses, establish healthy self-evaluation, dare to face challenges"
+    },
+    "boundaries": {
+      "title": "Healthy Personal Boundaries",
+      "desc": "Learn to establish and maintain personal boundaries, avoid excessive accommodation of others, protect your emotional health"
+    },
+    "communication": {
+      "title": "Improved Family Relationships",
+      "desc": "Master healthy communication skills, establish more equal and understanding relationships with parents"
+    },
+    "social": {
+      "title": "Rich Social Life",
+      "desc": "Expand social circles, make like-minded friends, build a healthy support network"
+    },
+    "direction": {
+      "title": "Clear Life Direction",
+      "desc": "Find goals that align with your values, plan a clear life path, full of forward momentum"
+    },
+    "growth": {
+      "title": "Continuous Personal Growth",
+      "desc": "Develop lifelong learning habits, constantly expand capability boundaries, realize self-value"
+    },
+    "happiness": {
+      "title": "More Fulfilling Happiness",
+      "desc": "Live authentically, enjoy a self-chosen life, experience inner satisfaction and happiness"
+    },
+    "cta": "Start Your Transformation Journey"
+  },
+  "howItWorks": {
+    "title": "How to Start Your Transformation Journey",
+    "step1": {
+      "title": "Download & Install",
+      "desc": "Download the \"Life Transformation\" app from the App Store or Google Play and install it on your device"
+    },
+    "step2": {
+      "title": "Complete Assessment",
+      "desc": "Complete the initial assessment questionnaire to help us understand your specific situation and needs"
+    },
+    "step3": {
+      "title": "Get Personalized Plan",
+      "desc": "Based on your assessment results, we will customize a personalized growth plan for you"
+    },
+    "step4": {
+      "title": "Follow the Plan",
+      "desc": "Invest 15-30 minutes daily to complete exercises and tasks in the app, grow gradually"
+    },
+    "step5": {
+      "title": "Track Progress",
+      "desc": "Regularly review your progress, adjust your plan, celebrate every small achievement"
+    }
+  },
+  "fiftyDayPlan": {
+    "title": "50-Day Transformation Plan",
+    "subtitle": "Scientifically designed 50-day plan, requiring only 15-30 minutes daily, to gradually change your thinking patterns and build healthy self-awareness",
+    "phase1": {
+      "title": "Awareness Phase (Days 1-10)",
+      "desc": "Identify the effects of parental conditioning, notice your thought patterns and emotional responses, begin building self-awareness",
+      "activity1": "Daily meditation and self-awareness exercises",
+      "activity2": "Emotion identification and recording",
+      "activity3": "Childhood experience exploration and reflection"
+    },
+    "phase2": {
+      "title": "Self-Discovery Phase (Days 11-20)",
+      "desc": "Deeply understand your interests, values, and talents, begin establishing an independent identity",
+      "activity1": "Personality traits and strengths analysis",
+      "activity2": "Interest exploration and experimentation",
+      "activity3": "Core values establishment"
+    },
+    "phase3": {
+      "title": "Behavior Reshaping Phase (Days 21-30)",
+      "desc": "Establish new healthy habits, learn to set boundaries, change behavioral patterns that hinder self-growth",
+      "activity1": "Boundary setting and communication practice",
+      "activity2": "Rejection and expression training",
+      "activity3": "Positive habit formation"
+    },
+    "phase4": {
+      "title": "Relationship Adjustment Phase (Days 31-40)",
+      "desc": "Reassess and adjust relationships with parents and others, establish healthy interaction patterns",
+      "activity1": "Parental relationship pattern analysis",
+      "activity2": "Healthy communication practice",
+      "activity3": "Social relationship expansion"
+    },
+    "phase5": {
+      "title": "Future Planning Phase (Days 41-50)",
+      "desc": "Based on your authentic self and values, plan your life direction and set goals that align with your inner desires",
+      "activity1": "Life vision construction",
+      "activity2": "Goal setting and action planning",
+      "activity3": "Long-term growth strategy development"
+    },
+    "cta": "Start 50-Day Transformation Plan"
+  },
+  "testimonials": {
+    "title": "Transformation Stories from Our Users",
+    "testimonial1": {
+      "text": "\"After using 'Life Transformation' for three months, I finally had the courage to discuss my true academic interests with my parents. The communication skills I learned through the app allowed me to clearly express my thoughts, rather than avoiding conflict as before. Now I'm pursuing my passion for music, and my parents have begun to respect my choices.\"",
+      "name": "Li Ming, 24",
+      "info": "Using Life Transformation for 3 months"
+    },
+    "testimonial2": {
+      "text": "\"All my life, I've made every decision according to my parents' expectations, completely unaware of what I like. The self-discovery module of 'Life Transformation' helped me discover my passion for psychology. Now I'm not only taking relevant courses but also joined interest groups where I've met many like-minded friends. For the first time, I feel like I'm living for myself.\"",
+      "name": "Zhang Ting, 28",
+      "info": "Using Life Transformation for 6 months"
+    },
+    "testimonial3": {
+      "text": "\"I used to be very afraid of socializing, always feeling not good enough. The mindfulness practices and self-affirmation training in the app helped me gradually build confidence. Through the social expansion module, I attended several small events, and now I can naturally communicate with people and even made a few good friends. Thank you 'Life Transformation' for giving me the courage to try new things.\"",
+      "name": "Wang Qiang, 31",
+      "info": "Using Life Transformation for 4 months"
+    }
+  },
+  "appPreview": {
+    "title": "App Prototype Preview in Different Styles",
+    "subtitle": "Explore the various interface styles we've created for different users, find the experience that suits you",
+    "styles": {
+      "eastern": "Eastern Style",
+      "magic": "Magic Style",
+      "tech": "Tech Style",
+      "onboarding": "Onboarding Flow",
+      "paywall": "Subscription Screen"
+    },
+    "easternStyle": {
+      "title": "Eastern Zen Style",
+      "desc": "Blending traditional Eastern aesthetics with modern design, creating a calm, peaceful atmosphere to help users settle their minds and find inner balance. Suitable for users who enjoy meditation and self-reflection.",
+      "feature1": "Ink painting visual elements and gradient tones",
+      "feature2": "Zen-inspired interface interaction experience",
+      "feature3": "Traditional philosophical wisdom integrated into functional design"
+    },
+    "magicStyle": {
+      "title": "Magical Fantasy Style",
+      "desc": "Integrating the self-growth journey into a magical worldview, stimulating users' curiosity and creativity through fantasy elements, making the growth process more interesting. Suitable for users wanting to add fun to their journey.",
+      "feature1": "Magical interface and animation effects",
+      "feature2": "Growth tasks designed as magical adventures",
+      "feature3": "Achievement system like upgrading magical abilities"
+    },
+    "techStyle": {
+      "title": "Modern Tech Style",
+      "desc": "Adopting clean, modern tech aesthetics, providing clear, intuitive data visualization and tool processes, focusing on efficiency and practicality. Suitable for rational, results-oriented users.",
+      "feature1": "Minimalist modern interface design and color scheme",
+      "feature2": "Data-driven progress tracking and visualization",
+      "feature3": "Efficient, convenient tool set and quick operations"
+    },
+    "onboarding": {
+      "title": "Onboarding Flow Preview",
+      "desc": "Carefully designed new user guidance process, through clear and concise steps, helping users quickly understand the app's core features and value, enhancing first-use experience.",
+      "feature1": "Intuitive and easy-to-understand usage guidance and tips",
+      "feature2": "Personalized initial assessment and plan customization",
+      "feature3": "Progressive feature introduction without creating pressure"
+    },
+    "paywall": {
+      "title": "Subscription Screen Preview",
+      "desc": "Clearly display subscription plans and value, helping users make decisions easily. We emphasize transparency and value communication, ensuring users understand all the benefits they receive.",
+      "feature1": "Transparent, clear pricing and benefit comparison",
+      "feature2": "Flexible and diverse subscription period options",
+      "feature3": "Safe and reliable payment process guarantee"
+    },
+    "fullDemo": "Try Full App Demo"
+  },
+  "pricing": {
+    "title": "Choose the Plan That Fits You",
+    "subtitle": "Flexible subscription options to meet needs at different stages",
+    "popularTag": "Most Popular",
+    "basic": {
+      "title": "Basic",
+      "price": "Free",
+      "feature1": "Basic self-discovery tests",
+      "feature2": "First 10 days of the 50-day plan",
+      "feature3": "Basic goal setting tools",
+      "feature4": "Limited access to community content",
+      "feature5": "Contains ads",
+      "cta": "Start Free"
+    },
+    "premium": {
+      "title": "Premium",
+      "period": "/ month",
+      "save": "Save 25% with annual plan",
+      "feature1": "All Basic features",
+      "feature2": "Complete 50-day transformation plan",
+      "feature3": "Unlimited mindfulness practice and guidance",
+      "feature4": "Advanced goal planning and tracking",
+      "feature5": "Complete communication courses and exercises",
+      "feature6": "Social activity recommendations and matching",
+      "feature7": "Curated learning resource library",
+      "feature8": "Ad-free experience",
+      "cta": "Subscribe Now"
+    },
+    "coach": {
+      "title": "Coach",
+      "period": "/ month",
+      "feature1": "All Premium features",
+      "feature2": "Professional one-on-one coaching",
+      "feature3": "Two video consultations per month",
+      "feature4": "Personalized growth plan customization",
+      "feature5": "Continuous feedback and adjustments",
+      "feature6": "Priority customer support",
+      "cta": "Upgrade to Coach"
+    },
+    "guarantee": {
+      "title": "7-Day Unconditional Refund Guarantee",
+      "desc": "If you're not satisfied with the subscription service, you can request a full refund within 7 days, no questions asked"
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "q1": "Can I cancel my subscription anytime?",
+      "a1": "Yes, you can cancel your subscription anytime in your account settings. After cancellation, you can still use the paid service until the end of your current subscription period.",
+      "q2": "Can I use the same account on different devices?",
+      "a2": "Yes. One account can be logged in on multiple devices simultaneously, and your data will be automatically synchronized to ensure a seamless experience.",
+      "q3": "How are coaches matched?",
+      "a3": "Based on your needs, goals, and preferences, we match you with the most suitable coach from our rigorously screened professional coaching team. You can request a change after the initial session until you find a coach that suits you.",
+      "q4": "Is my personal data secure?",
+      "a4": "We highly value user privacy. All personal data is protected using industry-standard encryption technology and will never be shared with third parties without permission. You can view, export, or delete your data at any time."
+    }
+  },
+  "download": {
+    "title": "Download Now, Start Your Self-Transformation Journey",
+    "subtitle": "Take action now, take the first step towards change",
+    "qrCode": "Scan QR code to download"
+  },
+  "footer": {
+    "app": "App",
+    "features": "Features",
+    "benefits": "Benefits",
+    "preview": "App Preview",
+    "pricing": "Pricing",
+    "resources": "Resources",
+    "blog": "Blog",
+    "guides": "Guides",
+    "events": "Events",
+    "community": "Community",
+    "company": "Company",
+    "about": "About Us",
+    "careers": "Careers",
+    "press": "Press",
+    "contact": "Contact Us",
+    "legal": "Legal",
+    "terms": "Terms of Use",
+    "privacy": "Privacy Policy",
+    "security": "Security Statement",
+    "cookies": "Cookie Policy",
+    "copyright": " 2023 Life Transformation. All rights reserved."
+  }
+}
